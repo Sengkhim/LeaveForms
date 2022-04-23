@@ -1,0 +1,23 @@
+D:\Application Programming interface\LeaveForms\Share\bin\Debug\net6.0\Share.deps.json
+D:\Application Programming interface\LeaveForms\Share\bin\Debug\net6.0\Share.dll
+D:\Application Programming interface\LeaveForms\Share\bin\Debug\net6.0\ref\Share.dll
+D:\Application Programming interface\LeaveForms\Share\bin\Debug\net6.0\Share.pdb
+D:\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.GeneratedMSBuildEditorConfig.editorconfig
+D:\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.AssemblyInfoInputs.cache
+D:\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.AssemblyInfo.cs
+D:\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.csproj.CoreCompileInputs.cache
+D:\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.dll
+D:\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\ref\Share.dll
+D:\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.pdb
+D:\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.csproj.AssemblyReference.cache
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\bin\Debug\net6.0\Share.deps.json
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\bin\Debug\net6.0\Share.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\bin\Debug\net6.0\ref\Share.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\bin\Debug\net6.0\Share.pdb
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.GeneratedMSBuildEditorConfig.editorconfig
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.AssemblyInfoInputs.cache
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.AssemblyInfo.cs
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.csproj.CoreCompileInputs.cache
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\ref\Share.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Share\obj\Debug\net6.0\Share.pdb

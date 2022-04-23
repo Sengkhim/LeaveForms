@@ -1,0 +1,195 @@
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\appsettings.Development.json
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\appsettings.json
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Servers.exe
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Servers.deps.json
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Servers.runtimeconfig.json
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Servers.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\ref\Servers.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Servers.pdb
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\AutoMapper.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\FluentValidation.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Humanizer.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\MediatR.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\MediatR.Contracts.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Extensions.Localization.Abstractions.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Application.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Domain.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Presistance.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Share.dll
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Application.pdb
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Domain.pdb
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Presistance.pdb
+D:\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Share.pdb
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.csproj.AssemblyReference.cache
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.AssemblyInfoInputs.cache
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.AssemblyInfo.cs
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.csproj.CoreCompileInputs.cache
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.MvcApplicationPartsAssemblyInfo.cs
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.MvcApplicationPartsAssemblyInfo.cache
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\staticwebassets.build.json
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\staticwebassets.development.json
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\scopedcss\bundle\Servers.styles.css
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.csproj.CopyComplete
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.dll
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\ref\Servers.dll
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.pdb
+D:\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.genruntimeconfig.cache
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.csproj.AssemblyReference.cache
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.GeneratedMSBuildEditorConfig.editorconfig
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.AssemblyInfoInputs.cache
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.AssemblyInfo.cs
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.csproj.CoreCompileInputs.cache
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.MvcApplicationPartsAssemblyInfo.cache
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\appsettings.Development.json
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\appsettings.json
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Servers.exe
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Servers.deps.json
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Servers.runtimeconfig.json
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Servers.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\ref\Servers.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Servers.pdb
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\AutoMapper.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\FluentValidation.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Hangfire.AspNetCore.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Hangfire.Core.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Hangfire.SqlServer.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Hangfire.Tags.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Humanizer.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\MailKit.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\MediatR.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\MediatR.Contracts.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Extensions.Localization.Abstractions.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\MimeKit.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\ca\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\de\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\es\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\fa\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\fr\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\nb\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\nl\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\pt-BR\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\pt-PT\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\pt\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\tr-TR\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\zh-TW\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\zh\Hangfire.Core.resources.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Application.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Domain.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Presistance.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Share.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Application.pdb
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Domain.pdb
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Presistance.pdb
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Share.pdb
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\staticwebassets.build.json
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\staticwebassets.development.json
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\scopedcss\bundle\Servers.styles.css
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.csproj.CopyComplete
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\ref\Servers.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.pdb
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.genruntimeconfig.cache
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\bin\Debug\net6.0\Microsoft.FeatureManagement.dll
+D:\Asp.net Core web api\Application Programming interface\LeaveForms\Servers\obj\Debug\net6.0\Servers.MvcApplicationPartsAssemblyInfo.cs
