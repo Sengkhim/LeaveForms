@@ -1,20 +1,18 @@
-﻿namespace Application.Repositery
+﻿using System.Linq.Expressions;
+
+namespace Application.Repositery
 {
-    public interface IRepositoryAsync<T> where T : class
+    public interface IRepositoryAsync<TEntity> where TEntity : class
     {
-        IQueryable<T> Entities { get; }
-
-        Task<T> GetByIdAsync(Guid id);
-
-        Task<List<T>> GetAllAsync();
-
-        Task<List<T>> GetPagedResponseAsync(int pageNumber, int pageSize);
-
-        Task<T> AddAsync(T entity);
-
-        Task UpdateAsync(T entity);
-
-        Task DeleteAsync(T entity);
+        IQueryable<TEntity> Entities { get; }
+        Task<TEntity?> GetByIdAsync(Guid id);
+        Task<IEnumerable<TEntity>> GetAllAsync();
+        Task<IEnumerable<TEntity>> GetPagedResponseAsync(int pageNumber, int pageSize);
+        Task<TEntity> AddAsync(TEntity entity);
+        Task UpdateAsync(TEntity entity);
+        Task DeleteAsync(TEntity entity);
+        IQueryable<TEntity> GetToQueryable();
+        Task<IQueryable<TEntity>?> FindAsync(Expression<Func<TEntity, bool>> Expression);
     }
 
 }

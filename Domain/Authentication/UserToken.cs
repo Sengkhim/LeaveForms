@@ -5,6 +5,7 @@ namespace Domain.Authentication
 {
     public class UserToken : IdentityUserToken<Guid>, IEntity
     {
+        public Guid Id { get; set; }
         public DateTimeOffset CreatedDate { get; set; }
         public DateTimeOffset? ModifiedDate { get; set; }
         public Guid? CreatedByUser { get; set; }

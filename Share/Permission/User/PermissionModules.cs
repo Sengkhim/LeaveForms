@@ -18,4 +18,17 @@ namespace Share.Permission.User
             };
         }
     }
+    public static class PermissionModulesUser
+    {
+        public const string Users = "Users";
+        public static List<string> GeneratePermissionsForModule(string module)
+        {
+            return new()
+            {
+                $"Permissions.{module}.Create",
+                $"Permissions.{module}.View",
+                $"Permissions.{module}.Edit",
+            };
+        }
+    }
 }

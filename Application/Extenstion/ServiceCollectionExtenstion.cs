@@ -1,4 +1,5 @@
-﻿using Application.Config;
+﻿using Application.BusinessObejct;
+using Application.Config;
 using Application.Implementation;
 using Application.Implementation.Service;
 using Application.Repositery;
@@ -6,7 +7,6 @@ using Application.Repositery.Service;
 using AutoMapper;
 using Domain.Authentication;
 using Hangfire;
-using Hangfire.SqlServer;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -17,6 +17,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Presistance.DataBase;
 using Share.Permission;
 using Share.Wapper;
@@ -30,27 +31,26 @@ namespace Application.Extenstion
     {
         public static IServiceCollection AddDatabaseLayer(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<DataContext>(e => e.UseSqlServer(configuration.GetConnectionString("LeaveForms"),
-                    o => o.MigrationsAssembly(typeof(DataContext).Assembly.FullName)))
-                .AddScoped<IDataContext, DataContext>();
+            services.AddDbContext<DataContext>(e => e.UseSqlServer(configuration.GetConnectionString("LeaveForms")));
             return services;
         }
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-
-            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserService , UserService>();
             services.AddScoped<ITokenService, IdentityService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IUserClaimService, UserClaimService>();
             services.AddScoped<IMailService, MailService>();
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IDatabaseSeeder, DatabaseSeeder>();
+            services.AddScoped<IBusinessLogics, BusinessLogics>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IDataContext, DataContext>();
+
             return services;
         }
         public static IServiceCollection AddHandFire(this IServiceCollection services, IConfiguration config)
         {
-            services.AddTransient<IBackgroundJobClient>(_ => 
-            new BackgroundJobClient(new SqlServerStorage("LeaveForms")));
             services.Configure<RouteOptions>(options => { options.LowercaseQueryStrings = true; });
             services.AddHangfire(configuration =>
             {
@@ -58,7 +58,6 @@ namespace Application.Extenstion
                 configuration.UseSimpleAssemblyNameTypeSerializer();
                 configuration.UseRecommendedSerializerSettings();
                 configuration.UseSqlServerStorage(config.GetConnectionString("LeaveForms"));
-                //JobStorage.Current = configuration.UseSqlServerStorage(config.GetConnectionString("LeaveForms"));
             });
         
             return services;
@@ -86,7 +85,6 @@ namespace Application.Extenstion
             services.Configure<MailConfiguration>(config);
             return config.Get<MailConfiguration>();
         }
-
         public static IServiceCollection AddIdentity(this IServiceCollection services)
         {
             services.Configure<DataProtectionTokenProviderOptions>(options =>
@@ -95,8 +93,6 @@ namespace Application.Extenstion
             });
 
             services
-                //.AddSingleton<IAuthorizationPolicyProvider, PermissionPolicyProvider>()
-                //.AddScoped<IAuthorizationHandler, PermissionAuthorizationHandler>()
                 .AddIdentity<User, Role>(options =>
                 {
                     options.Password.RequiredLength = 6;
@@ -106,7 +102,10 @@ namespace Application.Extenstion
                     options.Password.RequireUppercase = false;
                     options.User.RequireUniqueEmail = true;
                 }).AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
-           
+
+            services.AddControllersWithViews().AddNewtonsoftJson(op =>
+                    op.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
+                   .AddNewtonsoftJson(op => op.SerializerSettings.ContractResolver = new DefaultContractResolver());
             return services;
         }
         public static IServiceCollection AddJwtAuthentication(this IServiceCollection services, AppConfig config)
@@ -171,10 +170,12 @@ namespace Application.Extenstion
             });
 
             services.AddHttpContextAccessor();
+            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             return services;
         }
         public static IServiceCollection AddPolicys(this IServiceCollection services)
         {
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
             services.AddAuthorization(options =>
             {
                 options.AddPolicy(Permissions.Users.View, policy =>
@@ -214,6 +215,42 @@ namespace Application.Extenstion
                 options.AddPolicy(Permissions.UserPermission.Delete, policy =>
                 policy.RequireClaim(ApplicationClaimTypes.Permission, Permissions.UserPermission.Delete));
 
+                //    Assembly assembly = Assembly.GetExecutingAssembly();
+                //    var types = assembly.GetTypes()
+                //                  .Where(t => String.Equals(t.Namespace, typeof(Permissions).Namespace, StringComparison.Ordinal))
+                //                  .ToArray();
+                //foreach (var type in types)
+                //{
+                //    var props = type.GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy);
+                //    foreach (var t in props)
+                //    {
+                //        options.AddPolicy(t.Name, policy =>
+                //        policy.RequireAssertion(context => context.User.HasClaim(c => c.Type == type.Name && c.Value == t.Name)));
+                //    }
+                //}
+
+                //services.AddAuthorization(options =>
+                //{
+                //    var permissions = typeof(Permissions).GetNestedTypes().SelectMany(c =>
+                //        c.GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy));
+                //    // Here I stored necessary permissions/roles in a constant
+                //    foreach (var prop in permissions)
+                //    {
+                //        var propertyValue = prop.GetValue(null);
+                //        if (propertyValue is not null)
+                //            options.AddPolicy(propertyValue.ToString(),
+                //                policy => policy.RequireClaim(ApplicationClaimTypes.Permission, propertyValue.ToString()));
+                //    }
+                //});
+
+            });
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                                  });
             });
             return services;
         }

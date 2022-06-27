@@ -1,53 +1,65 @@
 ﻿using Application.Repositery;
 using Microsoft.EntityFrameworkCore;
 using Presistance.DataBase;
+using System.Linq.Expressions;
 
 namespace Application.Implementation
 {
-    public class RepositoryAsync<T> : IRepositoryAsync<T> where T : class
+    public class RepositoryAsync<TEntity> : IRepositoryAsync<TEntity> where TEntity : class
     {
-        private readonly DataContext _context;
+        private readonly IDataContext _context;
 
-        public RepositoryAsync(DataContext context)
+        public RepositoryAsync(IDataContext context)
         {
             _context = context;
         }
 
-        public IQueryable<T> Entities => _context.Set<T>();
+        public IQueryable<TEntity> Entities => _context.Set<TEntity>();
 
-        public async Task<T> AddAsync(T entity)
+        public async Task<TEntity> AddAsync(TEntity entity)
         {
-            await _context.Set<T>().AddAsync(entity);
+            _context.Entry(entity).State = EntityState.Added;
+            await _context.Set<TEntity>().AddAsync(entity);
             return entity;
         }
 
-        public Task DeleteAsync(T entity)
+        public Task DeleteAsync(TEntity entity)
         {
-            _context.Set<T>().Remove(entity);
+            _context.Entry(entity).State = EntityState.Detached;
+            _context.Set<TEntity>().Remove(entity);
             return Task.CompletedTask;
         }
 
-        public async Task<List<T>> GetAllAsync()
+        public async Task<IQueryable<TEntity>?> FindAsync(Expression<Func<TEntity, bool>> Expression)
         {
-            return await _context.Set<T>().ToListAsync();
+            var result = _context.Set<TEntity>().AsQueryable().Where(Expression);
+            return await Task.FromResult(result);
         }
 
-        public async Task<T> GetByIdAsync(Guid id)
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            return await _context.Set<T>().FindAsync(id);
+            return await _context.Set<TEntity>().ToListAsync();
         }
 
-        public async Task<List<T>> GetPagedResponseAsync(int pageNumber, int pageSize)
+        public async Task<TEntity?> GetByIdAsync(Guid id)
         {
-            return await _context
-                .Set<T>()
-                .Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize)
-                .AsNoTracking()
-                .ToListAsync();
+            return await _context.Set<TEntity>().FindAsync(id);
         }
 
-        public Task UpdateAsync(T entity)
+        public async Task<IEnumerable<TEntity>> GetPagedResponseAsync(int pageNumber, int pageSize)
+        {
+            return await _context.Set<TEntity>().Skip((pageNumber - 1) * pageSize)
+                                 .Take(pageSize).AsNoTracking().ToListAsync();
+        }
+
+        public IQueryable<TEntity> GetToQueryable()
+        {
+            var x = typeof(TEntity);
+           var query = _context.Set<TEntity>().AsQueryable();
+            return query;
+        }
+
+        public Task UpdateAsync(TEntity entity)
         {
             _context.Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;

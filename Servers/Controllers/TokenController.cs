@@ -13,9 +13,9 @@ namespace Servers.Controllers
     {
 
         private readonly ITokenService _identityService;
-        private readonly ICurrentUserService currentUserService;
+        private readonly IUserSerive currentUserService;
 
-        public TokenController(ITokenService identityService, ICurrentUserService currentUserService)
+        public TokenController(ITokenService identityService, IUserSerive currentUserService)
         {
             _identityService = identityService;
             this.currentUserService = currentUserService;

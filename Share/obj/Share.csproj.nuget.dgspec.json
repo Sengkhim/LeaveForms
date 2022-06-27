@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj": {}
+    "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj": {}
   },
   "projects": {
-    "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj": {
+    "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj",
+        "projectUniqueName": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj",
         "projectName": "Share",
-        "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj",
+        "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj",
         "packagesPath": "C:\\Users\\khimu\\.nuget\\packages\\",
-        "outputPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\obj\\",
+        "outputPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\khimu\\AppData\\Roaming\\NuGet\\NuGet.Config",

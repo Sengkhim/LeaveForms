@@ -15,7 +15,8 @@ namespace Servers.Controllers
         private readonly IUserService _userService;
         public UserController(IUserService userService) => _userService = userService;
 
-        [Authorize(Policy = Permissions.Users.View)]
+        //[Authorize(Policy = Permissions.Users.View)]
+        //[Authorize(Roles ="")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {

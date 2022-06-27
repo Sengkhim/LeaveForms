@@ -15,7 +15,7 @@ namespace Application.Conmon.Request.Identity
         [Required] public string? PhoneNumber { get; set; }
 
         public bool ActivateUser { get; set; } = true;
-        public bool AutoConfirmEmail { get; set; } = false;
+        public bool AutoConfirmEmail { get; set; } = true;
         public string? UserName { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }

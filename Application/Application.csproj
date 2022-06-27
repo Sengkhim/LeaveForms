@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Feature\Command\" />
-    <Folder Include="Feature\Validator\" />
-    <Folder Include="Feature\Response\" />
-    <Folder Include="Feature\Query\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="FluentValidation" Version="10.4.0" />
@@ -21,10 +14,13 @@
     <PackageReference Include="Hangfire.Core" Version="1.7.28" />
     <PackageReference Include="Hangfire.SqlServer" Version="1.7.28" />
     <PackageReference Include="Hangfire.Tags" Version="1.8.1" />
+    <PackageReference Include="JsonObjectSerializer" Version="0.7.6" />
     <PackageReference Include="MailKit" Version="3.2.0" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
       <PrivateAssets>all</PrivateAssets>
@@ -48,6 +44,17 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Presistance\Presistance.csproj" />
     <ProjectReference Include="..\Share\Share.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Feature\Departerment\Position\Validator\" />
+    <Folder Include="Feature\Departerment\Validator\" />
+    <Folder Include="Feature\Member\Validator\" />
+    <Folder Include="Feature\ReasonCode\Command\Delete\" />
+    <Folder Include="Feature\ReasonCode\Command\Update\" />
+    <Folder Include="Feature\ReasonCode\Validator\" />
+    <Folder Include="Feature\RecordStatusType\Response\" />
+    <Folder Include="Feature\RecordStatusType\Query\" />
   </ItemGroup>
 
 </Project>

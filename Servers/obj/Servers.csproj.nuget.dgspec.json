@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\Servers.csproj": {}
+    "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\Servers.csproj": {}
   },
   "projects": {
-    "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj": {
+    "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj",
+        "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\khimu\\.nuget\\packages\\",
-        "outputPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\obj\\",
+        "outputPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\khimu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,14 +28,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj"
+              "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj"
               },
-              "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\Presistance.csproj": {
-                "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\Presistance.csproj"
+              "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\Presistance.csproj": {
+                "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\Presistance.csproj"
               },
-              "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj": {
-                "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj"
+              "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj": {
+                "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj"
               }
             }
           }
@@ -78,9 +78,17 @@
               "target": "Package",
               "version": "[1.8.1, )"
             },
+            "JsonObjectSerializer": {
+              "target": "Package",
+              "version": "[0.7.6, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -93,6 +101,10 @@
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[6.0.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -162,14 +174,14 @@
         }
       }
     },
-    "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj": {
+    "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\khimu\\.nuget\\packages\\",
-        "outputPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\obj\\",
+        "outputPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\khimu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -198,6 +210,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[6.0.3, )"
@@ -222,14 +238,14 @@
         }
       }
     },
-    "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\Presistance.csproj": {
+    "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\Presistance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\Presistance.csproj",
+        "projectUniqueName": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\Presistance.csproj",
         "projectName": "Presistance",
-        "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\Presistance.csproj",
+        "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\Presistance.csproj",
         "packagesPath": "C:\\Users\\khimu\\.nuget\\packages\\",
-        "outputPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\obj\\",
+        "outputPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Presistance\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\khimu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -246,8 +262,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj"
+              "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Domain\\Domain.csproj"
               }
             }
           }
@@ -262,9 +278,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Hangfire.Tags": {
               "target": "Package",
               "version": "[1.8.1, )"
+            },
+            "JsonObjectSerializer": {
+              "target": "Package",
+              "version": "[0.7.6, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -314,14 +338,14 @@
         }
       }
     },
-    "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\Servers.csproj": {
+    "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\Servers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\Servers.csproj",
+        "projectUniqueName": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\Servers.csproj",
         "projectName": "Servers",
-        "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\Servers.csproj",
+        "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\Servers.csproj",
         "packagesPath": "C:\\Users\\khimu\\.nuget\\packages\\",
-        "outputPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\obj\\",
+        "outputPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\khimu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -338,8 +362,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj": {
-                "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj"
+              "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj": {
+                "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj"
               }
             }
           }
@@ -403,14 +427,14 @@
         }
       }
     },
-    "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj": {
+    "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj",
+        "projectUniqueName": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj",
         "projectName": "Share",
-        "projectPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj",
+        "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj",
         "packagesPath": "C:\\Users\\khimu\\.nuget\\packages\\",
-        "outputPath": "D:\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\obj\\",
+        "outputPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\khimu\\AppData\\Roaming\\NuGet\\NuGet.Config",

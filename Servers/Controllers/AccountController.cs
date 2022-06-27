@@ -24,7 +24,7 @@ namespace Servers.Controllers
         [Route("/api/account/change-password")]
         public async Task<ActionResult> ChangePassword(ChangePasswordRequest model)
         {
-            var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var userId =  _httpContextAccessor.HttpContext!.User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
             var response = await _service.ChangePasswordAsync(model, new Guid(userId));
             return Ok(response);
         }

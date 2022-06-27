@@ -12,7 +12,7 @@ namespace Presistance.Mapconfig
             builder.HasData(new User
             {
                 Id = DefaultEntity.User,
-                UserName = "system",
+                UserName = "BenZ",
                 FirstName = "BenZ",
                 LastName = "UTC",
                 Status = true,
@@ -28,14 +28,6 @@ namespace Presistance.Mapconfig
                 RefreshTokenExpiryTime = DateTime.MaxValue,
                 RefreshToken = "WPOJONETW3HXSDNK4LQR47BNYJSG7OFG"
             });
-        }
-    }
-    public class StudentConfig : IEntityTypeConfiguration<Student>
-    {
-        public void Configure(EntityTypeBuilder<Student> builder)
-        {
-            builder.ToTable("Student", "Students").HasKey(e => e.StudentId);
-            builder.HasIndex(e => e.UserId).IsUnique();
         }
     }
 }
