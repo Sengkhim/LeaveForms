@@ -16,7 +16,6 @@ namespace Domain
         [ForeignKey(nameof(LeaveTypeId))] public LeaveType? LeaveType { get; set; }
         [ForeignKey(nameof(ReasonCodeId))] public ReasonCode? ReasonCode { get; set; }
         public ICollection<MemberActualLeave>? MemberActualLeave { get; set; }
-        public ICollection<ActualLeaveRecord>? ActualLeaveRecord { get; set; }
     }
 
 }

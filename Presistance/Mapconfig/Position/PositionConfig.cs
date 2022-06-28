@@ -13,7 +13,6 @@ namespace Presistance.Mapconfig
             builder.HasIndex(e => new { e.Code }).IsUnique();
             builder.Property(e => e.Description).IsUnicode().HasMaxLength(200);
             builder.Property(e => e.Code).HasMaxLength(20).IsRequired().HasColumnType("varchar");
-            builder.HasMany(e => e.PositionRecord).WithOne(x => x.Position).HasForeignKey(x => x.PositionId);
         }
     }
 }

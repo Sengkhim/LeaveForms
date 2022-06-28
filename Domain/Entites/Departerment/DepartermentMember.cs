@@ -11,6 +11,5 @@ namespace Domain
         public double? Total { get; set; }
         public Departerment? Departerment { get; set; }
         [ForeignKey(nameof(UserId))] public User? User { get; set; }
-        public ICollection<DepartermentMemberRecord>? DepartermentMemberRecord { get; set; }
     }
 }

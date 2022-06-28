@@ -47,14 +47,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Feature\Departerment\Position\Validator\" />
-    <Folder Include="Feature\Departerment\Validator\" />
     <Folder Include="Feature\Member\Validator\" />
-    <Folder Include="Feature\ReasonCode\Command\Delete\" />
-    <Folder Include="Feature\ReasonCode\Command\Update\" />
-    <Folder Include="Feature\ReasonCode\Validator\" />
-    <Folder Include="Feature\RecordStatusType\Response\" />
-    <Folder Include="Feature\RecordStatusType\Query\" />
   </ItemGroup>
 
 </Project>

@@ -13,6 +13,5 @@ namespace Domain.Entites.Postition
         public double? Total { get; set; }
         [ForeignKey(nameof(PositionId))] public Position? Position { get; set; }
         [ForeignKey(nameof(UserId))] public User? User { get; set; }
-        public ICollection<PositionMemberRecord>? PositionMemberRecord { get; set;}
     }
 }

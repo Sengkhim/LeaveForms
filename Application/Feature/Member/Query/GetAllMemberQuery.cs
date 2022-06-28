@@ -26,7 +26,8 @@ namespace Application
                 try
                 {
                     var query = _unitOf.Repository<Member>().GetToQueryable();
-                    var toData = query.Include(e => e.Position).Include(d => d.Departerment).AsQueryable();
+                    var toData = query.Include(e => e.Position).Include(d => d.Departerment)
+                                      .Include(u => u.User).Include(t => t.MemberAdvanceLeave).AsQueryable();
                     var data = await toData.ToListAsync(cancellationToken);
                     var mapData = _mapper.Map<List<MemberResponse>>(data);
 

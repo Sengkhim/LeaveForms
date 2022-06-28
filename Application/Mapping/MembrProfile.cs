@@ -15,7 +15,7 @@ namespace Application.Mapping
             .ForMember(r => r.Position, source => source.MapFrom(source => source.Position!.Name))
             .ForMember(r => r.Email, source => source.MapFrom(source => source.User!.Email))
             .ForMember(r => r.PhoneNumber, source => source.MapFrom(source => source.User!.PhoneNumber))
-            .ForMember(r => r.MemberAdvanceLeaveResponse, source => source.MapFrom(source => source.MemberAdvanceLeaveRequest))
+            .ForMember(r => r.MemberAdvanceLeaveResponse, source => source.MapFrom(source => source.MemberAdvanceLeave))
             .ForMember(r => r.Departerment, source => source.MapFrom(source => source.Departerment!.Name));
         }
     }

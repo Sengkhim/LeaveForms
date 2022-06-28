@@ -8,11 +8,11 @@ namespace Application.Mapping
     {
         public ReasonCodeProfile()
         {
-            CreateMap<ReasonCode, ReasonCodeResponse>();
-            CreateMap<ReasonCodeRecord, ReasonCodeRecordResponse>()
-            .ForMember(r => r.RecordStatusTypeCode, source => source.MapFrom(source => source.RecordStatusType!.Code))
-            .ForMember(r => r.BeginDate, source => source.MapFrom(source => source.Period!.BeginDate))
-            .ForMember(r => r.EndDate, source => source.MapFrom(source => source.Period!.EndDate));
+            //CreateMap<ReasonCode, ReasonCodeResponse>();
+            //CreateMap<ReasonCodeRecord, ReasonCodeRecordResponse>()
+            //.ForMember(r => r.RecordStatusTypeCode, source => source.MapFrom(source => source.RecordStatusType!.Code))
+            //.ForMember(r => r.BeginDate, source => source.MapFrom(source => source.Period!.BeginDate))
+            //.ForMember(r => r.EndDate, source => source.MapFrom(source => source.Period!.EndDate));
         }
     }
 }

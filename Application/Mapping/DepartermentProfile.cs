@@ -9,7 +9,7 @@ namespace Application.Mapping
     {
         public DepartermentProfile()
         {
-            CreateMap<Departerment, DepartermentResponse>().ReverseMap();
+            //CreateMap<Departerment, DepartermentResponse>().ReverseMap();
         }
     }
 }

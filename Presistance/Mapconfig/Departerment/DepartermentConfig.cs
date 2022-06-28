@@ -14,7 +14,6 @@ namespace Presistance.Mapconfig
             builder.Property(e => e.Description).IsUnicode().HasMaxLength(200);
             builder.Property(e => e.Code).HasMaxLength(20).IsRequired().HasColumnType("varchar");
             builder.Property(e => e.Name).HasMaxLength(30).IsRequired().HasColumnType("varchar");
-            builder.HasMany(e => e.DepartermentRecord).WithOne(r => r.Departerment).HasForeignKey(f => f.DepartermentId);
             builder.HasMany(e => e.DepartermentMember).WithOne(r => r.Departerment).HasForeignKey(f => f.DepartermentId);
         }
     }

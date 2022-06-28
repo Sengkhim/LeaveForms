@@ -1,4 +1,4 @@
-﻿using Application.BusinessObejct;
+﻿
 using Application.Config;
 using Application.Implementation;
 using Application.Implementation.Service;
@@ -31,7 +31,7 @@ namespace Application.Extenstion
     {
         public static IServiceCollection AddDatabaseLayer(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<DataContext>(e => e.UseSqlServer(configuration.GetConnectionString("LeaveForms")));
+            services.AddDbContext<DataContext>(e => e.UseSqlServer(configuration.GetConnectionString("LeavePlatform")));
             return services;
         }
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
@@ -43,7 +43,6 @@ namespace Application.Extenstion
             services.AddScoped<IMailService, MailService>();
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IDatabaseSeeder, DatabaseSeeder>();
-            services.AddScoped<IBusinessLogics, BusinessLogics>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IDataContext, DataContext>();
 

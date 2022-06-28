@@ -10,8 +10,6 @@ namespace Presistance.Mapconfig
         {
             builder.ToTable("ActualLeaves", "ActualLeave").HasKey(f => f.Id);
             builder.Property(e => e.Description).IsUnicode().HasMaxLength(200);
-
-            builder.HasMany(e => e.ActualLeaveRecord).WithOne(r => r.ActualLeave).HasForeignKey(f => f.ActualLeaveId);
         }
     }
 }

@@ -10,8 +10,6 @@ namespace Presistance.Mapconfig
         public void Configure(EntityTypeBuilder<DepartermentMember> builder)
         {
             builder.ToTable("DepartermentMembers", "Departerment").HasKey(f => f.Id);
-            builder.HasMany(e => e.DepartermentMemberRecord).WithOne(r => r.DepartermentMember)
-                                                            .HasForeignKey(f => f.DepartermentMemberId);
         }
     }
 }

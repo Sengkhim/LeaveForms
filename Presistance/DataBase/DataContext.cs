@@ -2,7 +2,6 @@
 using Domain.Authentication;
 using Domain.Entites;
 using Domain.Entites.BaseEntity;
-using Domain.Entites.Company;
 using Domain.Entites.Postition;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -25,63 +24,28 @@ namespace Presistance.DataBase
         #region Entity Dbset
         public IDbConnection Connection => Database.GetDbConnection();
         public DbSet<Member> Members { get ; set ; }
-        public DbSet<MemberRecord> MembersRecord { get ; set ; }
-        public DbSet<MemberType> MemberTypes { get ; set ; }
-        public DbSet<MemberTypeRecord> MemberTypesRecord { get ; set ; }
         public DbSet<Position> Position { get ; set ; }
-        public DbSet<PositionRecord> PositionRecord { get ; set ; }
         public DbSet<PositionMember> PositionMember { get ; set ; }
-        public DbSet<PositionMemberRecord> PositionMemberRecord { get ; set ; }
         public DbSet<ReasonCode> ReasonCode { get ; set ; }
-        public DbSet<ReasonCodeRecord> ReasonCodeRecord { get ; set ; }
         public DbSet<Period> Period { get ; set ; }
         public DbSet<Leave> Leave { get ; set ; }
-        public DbSet<LeaveRecord> LeaveRecord { get ; set ; }
         public DbSet<LeaveType> LeaveType { get ; set ; }
-        public DbSet<LeaveTypeRecord> LeaveTypeRecord { get ; set ; }
         public DbSet<Departerment> Departerment { get ; set ; }
-        public DbSet<DepartermentRecord> DepartermentRecord { get ; set ; }
         public DbSet<DepartermentMember> DepartermentMember { get ; set ; }
-        public DbSet<DepartermentMemberRecord> DepartermentMemberRecord { get ; set ; }
-        public DbSet<Company> Company { get ; set ; }
-        public DbSet<CompanyRecord> CompanyRecord { get ; set ; }
-        public DbSet<Branch> Branche { get ; set ; }
-        public DbSet<BranchRecord> BranchRecord { get ; set ; }
-        public DbSet<CompanyDeparterment> CompanyDeparterment { get ; set ; }
-        public DbSet<CompanyDepartermentRecord> CompanyDepartermentRecord { get ; set ; }
-        public DbSet<CompanyDetail> CompanyDetail { get ; set ; }
-        public DbSet<CompanyMember> CompanyMember { get ; set ; }
-        public DbSet<CompanyMemberRecord> CompanyMemberRecord { get ; set ; }
-        public DbSet<CompanyPosition> CompanyPosition { get ; set ; }
-        public DbSet<CompanyPositionRecord> CompanyPositionRecord { get ; set ; }
-        public DbSet<Contact> Contact { get ; set ; }
-        public DbSet<ContactRecord> ContactRecord { get ; set ; }
-        public DbSet<Region> Region { get ; set ; }
-        public DbSet<RegionRecord> RegionRecord { get ; set ; }
         public DbSet<ActualLeave> ActualLeave { get ; set ; }
         public DbSet<AdvanceLeave> AdvanceLeave { get ; set ; }
-        public DbSet<RecordStatusType> RecordStatusType { get ; set ; }
-        public DbSet<RecordStatusTypeMember> RecordStatusTypeMember { get ; set ; }
         public DbSet<Project> Project { get ; set ; }
-        public DbSet<ProjectRecord> ProjectRecord { get ; set ; }
         public DbSet<Working> Working { get ; set ; }
         public DbSet<WorkingType> WorkingType { get ; set ; }
-        public DbSet<WorkingRecord> WorkingRecord { get ; set ; }
-        public DbSet<WorkingTypeRecord> WorkingTypeRecord { get ; set ; }
-        public DbSet<ActualLeaveRecord> ActualLeaveRecord { get ; set ; }
         public DbSet<MemberActualLeave> MemberActualLeave { get ; set ; }
-        public DbSet<MemberActualLeaveRecord> MemberActualLeaveRecord { get ; set ; }
-        public DbSet<AdvanceLeaveRecord> AdvanceLeaveRecord { get ; set ; }
-        public DbSet<MemberAdvanceLeaveRecord> MemberAdvanceLeaveRecord { get ; set ; }
-        public DbSet<MemberAdvanceLeaveRequest> MemberAdvanceLeaveRequests { get ; set ; }
-
+        public DbSet<MemberAdvanceLeave> TestAdvances { get; set; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-4OH8OSU;Initial Catalog=LeaveForms;Persist Security Info=True;User ID=sa;Password=12345");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-4OH8OSU;Initial Catalog=LeavePlatform;Persist Security Info=True;User ID=sa;Password=12345");
             }
         }
 

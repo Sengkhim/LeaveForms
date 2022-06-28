@@ -10,7 +10,6 @@ namespace Domain
         public string? Name { get; set; }
         public string? Description { get; set; }
         public LeaveType? LeaveType { get; set; }
-        public ICollection<LeaveRecord>? LeaveRecord { get; set; }
     }
 
 }

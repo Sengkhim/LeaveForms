@@ -10,7 +10,6 @@ namespace Domain
         [ForeignKey(nameof(ActualLeaveId))] public ActualLeave? ActualLeave { get; set ; }
         public Guid UserId { get; set; }
         [ForeignKey(nameof(UserId))] public User? User { get; set; }
-        public ICollection<MemberActualLeaveRecord>? MemberActualLeaveRecords { get; set;}
     }
 
 }

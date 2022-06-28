@@ -8,8 +8,8 @@ namespace Application.Mapping
     {
         public PeriodProfile()
         {
-            CreateMap<Period, PeriodResponse>().ReverseMap();
-            CreateMap<Period, PeriodCommand>().ReverseMap();
+            //CreateMap<Period, PeriodResponse>().ReverseMap();
+            //CreateMap<Period, PeriodCommand>().ReverseMap();
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using Application.Conmon.Response.Identity;
+using Application.Feature;
 using AutoMapper;
 using Domain.Authentication;
+using Domain.Entites;
 
 namespace Application
 {

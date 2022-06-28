@@ -1,4 +1,4 @@
-﻿using Application.BusinessObejct;
+﻿
 using Application.Repositery;
 using Domain.Authentication;
 using Domain.Entites;
@@ -25,7 +25,6 @@ namespace Application.Implementation
             _manager = manager;
         }
 
-        public Codes Code { get; } = new();
 
         public async Task<int> CommitAsync(CancellationToken cancellationToken) 
             => await _context!.SaveChangesAsync(cancellationToken);

@@ -54,9 +54,8 @@ namespace Application.Implementation
 
         public IQueryable<TEntity> GetToQueryable()
         {
-            var x = typeof(TEntity);
            var query = _context.Set<TEntity>().AsQueryable();
-            return query;
+           return query;
         }
 
         public Task UpdateAsync(TEntity entity)

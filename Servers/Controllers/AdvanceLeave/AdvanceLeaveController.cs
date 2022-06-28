@@ -14,7 +14,7 @@ namespace Servers.Controllers.AdvanceLeave
         [HttpGet("/api/addvance-leave")]
         public async Task<IActionResult> GetAllAync()
         {
-            return Ok(await _mediator.Send(new GetAllAdvanceLeaveQuery()));
+            return Ok(await _mediator.Send(new MemeberAdvanceLeaveQuery()));
         }
     }
     

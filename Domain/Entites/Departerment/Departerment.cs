@@ -7,7 +7,6 @@ namespace Domain
         public string? Name { get; set; }
         public string? Code { get; set; }
         public string? Description { get; set; }
-        public ICollection<DepartermentRecord>? DepartermentRecord { get; set; }
         public ICollection<DepartermentMember>? DepartermentMember { get; set; }
     }
 }

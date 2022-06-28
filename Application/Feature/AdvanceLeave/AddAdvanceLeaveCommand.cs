@@ -8,8 +8,8 @@ namespace Application.Feature
 {
     public class AddAdvanceLeaveCommand : IRequest<IResponse>
     {
-        public Guid LeaveTypeId { get; set; }
-        public Guid ReasonCodeId { get; set; }
+        //public Guid LeaveTypeId { get; set; }
+        //public Guid ReasonCodeId { get; set; }
         public string? Description { get; set; }
         public DateTimeOffset FromDate { get; set; }
         public DateTimeOffset ToDate { get; set; }
@@ -32,8 +32,8 @@ namespace Application.Feature
                 var entity = new AdvanceLeave
                 {
                     Id = Guid.NewGuid(),
-                    LeaveTypeId = request.LeaveTypeId,
-                    ReasonCodeId = request.ReasonCodeId,
+                    //LeaveTypeId = request.LeaveTypeId,
+                    //ReasonCodeId = request.ReasonCodeId,
                     FromDate = request.FromDate,
                     ToDate = request.ToDate,
                     Description = request.Description,
