@@ -5144,19 +5144,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\khimu\\.nuget\\packages\\": {}
+    "C:\\Users\\atech\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\Servers.csproj",
+      "projectUniqueName": "D:\\Projects\\BackEnd\\LeaveForms\\Servers\\Servers.csproj",
       "projectName": "Servers",
-      "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\Servers.csproj",
-      "packagesPath": "C:\\Users\\khimu\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Servers\\obj\\",
+      "projectPath": "D:\\Projects\\BackEnd\\LeaveForms\\Servers\\Servers.csproj",
+      "packagesPath": "C:\\Users\\atech\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\BackEnd\\LeaveForms\\Servers\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\khimu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\atech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5170,8 +5175,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj": {
-              "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Application\\Application.csproj"
+            "D:\\Projects\\BackEnd\\LeaveForms\\Application\\Application.csproj": {
+              "projectPath": "D:\\Projects\\BackEnd\\LeaveForms\\Application\\Application.csproj"
             }
           }
         }
@@ -5231,7 +5236,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
