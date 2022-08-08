@@ -8,8 +8,8 @@ namespace Domain
     {
         public Guid ActualLeaveId { get; set; }
         [ForeignKey(nameof(ActualLeaveId))] public ActualLeave? ActualLeave { get; set ; }
-        public Guid UserId { get; set; }
-        [ForeignKey(nameof(UserId))] public User? User { get; set; }
+        public Guid MemberId { get; set; }
+        [ForeignKey(nameof(MemberId))] public Member? Member { get; set; }
     }
 
 }

@@ -35,15 +35,16 @@ namespace Presistance.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .IsUnicode(true)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("FeedBacks")
                         .HasColumnType("int");
 
                     b.Property<DateTimeOffset>("FromDate")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<Guid>("LeaveTypeId")
                         .HasColumnType("uniqueidentifier");
@@ -57,11 +58,14 @@ namespace Presistance.Migrations
                     b.Property<Guid>("ReasonCodeId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<double>("Remaining")
-                        .HasColumnType("float");
-
                     b.Property<DateTimeOffset>("ToDate")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<double>("TotalLeave")
+                        .HasColumnType("float");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -73,7 +77,9 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ReasonCodeId");
 
-                    b.ToTable("ActualLeaves", "ActualLeave");
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ActualLeave");
                 });
 
             modelBuilder.Entity("Domain.AdvanceLeave", b =>
@@ -89,9 +95,7 @@ namespace Presistance.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .IsUnicode(true)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("FeedBacks")
                         .HasColumnType("int");
@@ -99,25 +103,43 @@ namespace Presistance.Migrations
                     b.Property<DateTimeOffset>("FromDate")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("LeaveTypeId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
 
                     b.Property<Guid?>("ModifiedUserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<double>("Remaining")
-                        .HasColumnType("float");
+                    b.Property<Guid>("ReasonCodeId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTimeOffset>("ToDate")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<double>("TotalLeave")
+                        .HasColumnType("float");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CreatedUserId");
 
+                    b.HasIndex("LeaveTypeId");
+
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("AdvanceLeaves", "AdvanceLeave");
+                    b.HasIndex("ReasonCodeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AdvanceLeave", "db");
                 });
 
             modelBuilder.Entity("Domain.Authentication.Role", b =>
@@ -283,7 +305,7 @@ namespace Presistance.Migrations
                             Id = new Guid("434c71ce-64fe-4a71-83ea-d61cb7b1f571"),
                             AccessFailedCount = 0,
                             ConcurrencyStamp = "2708d6d2-9657-423a-bb75-34be3b1e2821",
-                            CreatedDate = new DateTimeOffset(new DateTime(2022, 6, 28, 23, 16, 47, 175, DateTimeKind.Unspecified).AddTicks(1742), new TimeSpan(0, 7, 0, 0, 0)),
+                            CreatedDate = new DateTimeOffset(new DateTime(2022, 7, 12, 10, 24, 47, 840, DateTimeKind.Unspecified).AddTicks(3829), new TimeSpan(0, 7, 0, 0, 0)),
                             Email = "benz@gmail.com",
                             EmailConfirmed = true,
                             FirstName = "BenZ",
@@ -415,16 +437,11 @@ namespace Presistance.Migrations
                     b.ToTable("UserTokens", "db");
                 });
 
-            modelBuilder.Entity("Domain.Departerment", b =>
+            modelBuilder.Entity("Domain.Department", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
 
                     b.Property<DateTimeOffset>("CreatedDate")
                         .HasColumnType("datetimeoffset");
@@ -433,9 +450,10 @@ namespace Presistance.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .IsUnicode(true)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
@@ -445,8 +463,7 @@ namespace Presistance.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("varchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -454,50 +471,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.HasIndex("Code", "Name")
-                        .IsUnique();
-
-                    b.ToTable("Departerments", "Departerment");
-                });
-
-            modelBuilder.Entity("Domain.DepartermentMember", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTimeOffset>("CreatedDate")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<Guid>("CreatedUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("DepartermentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTimeOffset?>("ModifiedDate")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<Guid?>("ModifiedUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<double?>("Total")
-                        .HasColumnType("float");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CreatedUserId");
-
-                    b.HasIndex("DepartermentId");
-
-                    b.HasIndex("ModifiedUserId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("DepartermentMembers", "Departerment");
+                    b.ToTable("Departerment");
                 });
 
             modelBuilder.Entity("Domain.Entites.Period", b =>
@@ -522,13 +496,13 @@ namespace Presistance.Migrations
                     b.Property<DateTimeOffset?>("EndDate")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
 
                     b.Property<Guid?>("ModifiedUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -536,104 +510,8 @@ namespace Presistance.Migrations
                     b.HasIndex("CreatedUserId");
 
                     b.HasIndex("ModifiedUserId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Period");
-                });
-
-            modelBuilder.Entity("Domain.Entites.Postition.PositionMember", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTimeOffset>("CreatedDate")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<Guid>("CreatedUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<DateTimeOffset?>("ModifiedDate")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<Guid?>("ModifiedUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("PositionId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<double?>("Total")
-                        .HasColumnType("float");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CreatedUserId");
-
-                    b.HasIndex("ModifiedUserId");
-
-                    b.HasIndex("PositionId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("PositionMember");
-                });
-
-            modelBuilder.Entity("Domain.Leave", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<DateTimeOffset>("CreatedDate")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<Guid>("CreatedUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .IsUnicode(true)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<Guid>("LeaveTypeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTimeOffset?>("ModifiedDate")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<Guid?>("ModifiedUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("varchar(30)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Code")
-                        .IsUnique();
-
-                    b.HasIndex("CreatedUserId");
-
-                    b.HasIndex("LeaveTypeId");
-
-                    b.HasIndex("ModifiedUserId");
-
-                    b.ToTable("Leaves", "Leave");
                 });
 
             modelBuilder.Entity("Domain.LeaveType", b =>
@@ -649,9 +527,10 @@ namespace Presistance.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .IsUnicode(true)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
@@ -661,8 +540,7 @@ namespace Presistance.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("varchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -670,7 +548,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("LeaveTypes", "Leave");
+                    b.ToTable("LeaveType");
                 });
 
             modelBuilder.Entity("Domain.Member", b =>
@@ -681,7 +559,7 @@ namespace Presistance.Migrations
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTimeOffset>("CreatedDate")
                         .HasColumnType("datetimeoffset");
@@ -693,8 +571,10 @@ namespace Presistance.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<Guid>("MemberId")
                         .HasColumnType("uniqueidentifier");
@@ -710,9 +590,6 @@ namespace Presistance.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Code")
-                        .IsUnique();
-
                     b.HasIndex("CreatedUserId");
 
                     b.HasIndex("DepartermentId");
@@ -722,10 +599,9 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.HasIndex("PositonId")
-                        .IsUnique();
+                    b.HasIndex("PositonId");
 
-                    b.ToTable("Members", "Member");
+                    b.ToTable("Members");
                 });
 
             modelBuilder.Entity("Domain.MemberActualLeave", b =>
@@ -743,13 +619,16 @@ namespace Presistance.Migrations
                     b.Property<Guid>("CreatedUserId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("MemberId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
 
                     b.Property<Guid?>("ModifiedUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -758,11 +637,11 @@ namespace Presistance.Migrations
 
                     b.HasIndex("CreatedUserId");
 
+                    b.HasIndex("MemberId");
+
                     b.HasIndex("ModifiedUserId");
 
-                    b.HasIndex("UserId");
-
-                    b.ToTable(" MemberActualLeave", "ActualLeave");
+                    b.ToTable("UserActualLeave");
                 });
 
             modelBuilder.Entity("Domain.MemberAdvanceLeave", b =>
@@ -779,6 +658,9 @@ namespace Presistance.Migrations
 
                     b.Property<Guid>("CreatedUserId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<Guid>("MemberId")
                         .HasColumnType("uniqueidentifier");
@@ -799,7 +681,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable(" MemberAdvanceLeave", "AdvanceLeave");
+                    b.ToTable("UserAdvanceLeave");
                 });
 
             modelBuilder.Entity("Domain.Position", b =>
@@ -808,11 +690,6 @@ namespace Presistance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
-
                     b.Property<DateTimeOffset>("CreatedDate")
                         .HasColumnType("datetimeoffset");
 
@@ -820,9 +697,10 @@ namespace Presistance.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(200)
-                        .IsUnicode(true)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
@@ -831,18 +709,16 @@ namespace Presistance.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Code")
-                        .IsUnique();
 
                     b.HasIndex("CreatedUserId");
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Positions", "Position");
+                    b.ToTable("Position");
                 });
 
             modelBuilder.Entity("Domain.Project", b =>
@@ -856,6 +732,9 @@ namespace Presistance.Migrations
 
                     b.Property<Guid>("CreatedUserId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
@@ -890,16 +769,13 @@ namespace Presistance.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
 
                     b.Property<Guid?>("ModifiedUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -907,8 +783,6 @@ namespace Presistance.Migrations
                     b.HasIndex("CreatedUserId");
 
                     b.HasIndex("ModifiedUserId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("ReasonCode");
                 });
@@ -924,6 +798,9 @@ namespace Presistance.Migrations
 
                     b.Property<Guid>("CreatedUserId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
@@ -951,6 +828,9 @@ namespace Presistance.Migrations
 
                     b.Property<Guid>("CreatedUserId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
@@ -991,6 +871,12 @@ namespace Presistance.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
+                    b.HasOne("Domain.Authentication.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.Navigation("CreateUser");
 
                     b.Navigation("LeaveType");
@@ -998,6 +884,8 @@ namespace Presistance.Migrations
                     b.Navigation("ModifiedUser");
 
                     b.Navigation("ReasonCode");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.AdvanceLeave", b =>
@@ -1008,13 +896,37 @@ namespace Presistance.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
+                    b.HasOne("Domain.LeaveType", "LeaveType")
+                        .WithMany()
+                        .HasForeignKey("LeaveTypeId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("Domain.Authentication.User", "ModifiedUser")
                         .WithMany()
                         .HasForeignKey("ModifiedUserId");
 
+                    b.HasOne("Domain.ReasonCode", "ReasonCode")
+                        .WithMany()
+                        .HasForeignKey("ReasonCodeId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Authentication.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.Navigation("CreateUser");
 
+                    b.Navigation("LeaveType");
+
                     b.Navigation("ModifiedUser");
+
+                    b.Navigation("ReasonCode");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Authentication.RoleClaim", b =>
@@ -1068,7 +980,7 @@ namespace Presistance.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Domain.Departerment", b =>
+            modelBuilder.Entity("Domain.Department", b =>
                 {
                     b.HasOne("Domain.Authentication.User", "CreateUser")
                         .WithMany()
@@ -1083,39 +995,6 @@ namespace Presistance.Migrations
                     b.Navigation("CreateUser");
 
                     b.Navigation("ModifiedUser");
-                });
-
-            modelBuilder.Entity("Domain.DepartermentMember", b =>
-                {
-                    b.HasOne("Domain.Authentication.User", "CreateUser")
-                        .WithMany()
-                        .HasForeignKey("CreatedUserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Departerment", "Departerment")
-                        .WithMany("DepartermentMember")
-                        .HasForeignKey("DepartermentId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Authentication.User", "ModifiedUser")
-                        .WithMany()
-                        .HasForeignKey("ModifiedUserId");
-
-                    b.HasOne("Domain.Authentication.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("CreateUser");
-
-                    b.Navigation("Departerment");
-
-                    b.Navigation("ModifiedUser");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entites.Period", b =>
@@ -1130,73 +1009,7 @@ namespace Presistance.Migrations
                         .WithMany()
                         .HasForeignKey("ModifiedUserId");
 
-                    b.HasOne("Domain.Authentication.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
                     b.Navigation("CreateUser");
-
-                    b.Navigation("ModifiedUser");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Domain.Entites.Postition.PositionMember", b =>
-                {
-                    b.HasOne("Domain.Authentication.User", "CreateUser")
-                        .WithMany()
-                        .HasForeignKey("CreatedUserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Authentication.User", "ModifiedUser")
-                        .WithMany()
-                        .HasForeignKey("ModifiedUserId");
-
-                    b.HasOne("Domain.Position", "Position")
-                        .WithMany("PositionMember")
-                        .HasForeignKey("PositionId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Authentication.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("CreateUser");
-
-                    b.Navigation("ModifiedUser");
-
-                    b.Navigation("Position");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Domain.Leave", b =>
-                {
-                    b.HasOne("Domain.Authentication.User", "CreateUser")
-                        .WithMany()
-                        .HasForeignKey("CreatedUserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("Domain.LeaveType", "LeaveType")
-                        .WithMany("Leave")
-                        .HasForeignKey("LeaveTypeId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Authentication.User", "ModifiedUser")
-                        .WithMany()
-                        .HasForeignKey("ModifiedUserId");
-
-                    b.Navigation("CreateUser");
-
-                    b.Navigation("LeaveType");
 
                     b.Navigation("ModifiedUser");
                 });
@@ -1226,7 +1039,7 @@ namespace Presistance.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("Domain.Departerment", "Departerment")
+                    b.HasOne("Domain.Department", "Departerment")
                         .WithMany()
                         .HasForeignKey("DepartermentId")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -1243,8 +1056,8 @@ namespace Presistance.Migrations
                         .HasForeignKey("ModifiedUserId");
 
                     b.HasOne("Domain.Position", "Position")
-                        .WithOne("Member")
-                        .HasForeignKey("Domain.Member", "PositonId")
+                        .WithMany()
+                        .HasForeignKey("PositonId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
@@ -1273,23 +1086,23 @@ namespace Presistance.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
+                    b.HasOne("Domain.Member", "Member")
+                        .WithMany("MemberActualLeave")
+                        .HasForeignKey("MemberId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("Domain.Authentication.User", "ModifiedUser")
                         .WithMany()
                         .HasForeignKey("ModifiedUserId");
-
-                    b.HasOne("Domain.Authentication.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
 
                     b.Navigation("ActualLeave");
 
                     b.Navigation("CreateUser");
 
-                    b.Navigation("ModifiedUser");
+                    b.Navigation("Member");
 
-                    b.Navigation("User");
+                    b.Navigation("ModifiedUser");
                 });
 
             modelBuilder.Entity("Domain.MemberAdvanceLeave", b =>
@@ -1371,17 +1184,9 @@ namespace Presistance.Migrations
                         .WithMany()
                         .HasForeignKey("ModifiedUserId");
 
-                    b.HasOne("Domain.Authentication.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
                     b.Navigation("CreateUser");
 
                     b.Navigation("ModifiedUser");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Working", b =>
@@ -1433,26 +1238,11 @@ namespace Presistance.Migrations
                     b.Navigation("Member");
                 });
 
-            modelBuilder.Entity("Domain.Departerment", b =>
-                {
-                    b.Navigation("DepartermentMember");
-                });
-
-            modelBuilder.Entity("Domain.LeaveType", b =>
-                {
-                    b.Navigation("Leave");
-                });
-
             modelBuilder.Entity("Domain.Member", b =>
                 {
+                    b.Navigation("MemberActualLeave");
+
                     b.Navigation("MemberAdvanceLeave");
-                });
-
-            modelBuilder.Entity("Domain.Position", b =>
-                {
-                    b.Navigation("Member");
-
-                    b.Navigation("PositionMember");
                 });
 #pragma warning restore 612, 618
         }

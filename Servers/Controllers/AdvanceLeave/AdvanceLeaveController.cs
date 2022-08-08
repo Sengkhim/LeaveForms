@@ -11,12 +11,24 @@ namespace Servers.Controllers.AdvanceLeave
         {
             return Ok(await _mediator.Send(command));
         }
+
         [HttpGet("/api/addvance-leave")]
         public async Task<IActionResult> GetAllAync()
         {
-            return Ok(await _mediator.Send(new MemeberAdvanceLeaveQuery()));
+            return Ok(await _mediator.Send(new GetAllAdvanceLeaveQuery()));
+        }
+
+        [HttpPut("/api/addvance-leave/{Id}")]
+        public async Task<IActionResult> DeleteAync(Guid Id)
+        {
+            return Ok(await _mediator.Send(new DeleteAdvanceLeaveCommand { Id = Id}));
+        }
+
+        [HttpPut("/api/addvance-leave")]
+        public async Task<IActionResult> UpdateAync(UpdateAdvanceLeaveCommand command)
+        {
+            return Ok(await _mediator.Send(command));
         }
     }
     
 }
-     

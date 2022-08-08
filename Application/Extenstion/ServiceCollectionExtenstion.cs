@@ -56,7 +56,7 @@ namespace Application.Extenstion
                 configuration.SetDataCompatibilityLevel(CompatibilityLevel.Version_170);
                 configuration.UseSimpleAssemblyNameTypeSerializer();
                 configuration.UseRecommendedSerializerSettings();
-                configuration.UseSqlServerStorage(config.GetConnectionString("LeaveForms"));
+                configuration.UseSqlServerStorage(config.GetConnectionString("LeavePlatform"));
             });
         
             return services;

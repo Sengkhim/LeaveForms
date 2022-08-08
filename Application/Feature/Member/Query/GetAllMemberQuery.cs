@@ -27,7 +27,11 @@ namespace Application
                 {
                     var query = _unitOf.Repository<Member>().GetToQueryable();
                     var toData = query.Include(e => e.Position).Include(d => d.Departerment)
-                                      .Include(u => u.User).Include(t => t.MemberAdvanceLeave).AsQueryable();
+                                      .Include(u => u.User).Include(t => t.MemberAdvanceLeave!)
+                                      .ThenInclude(a => a.AdvanceLeave).ThenInclude(r => r.ReasonCode)
+                                      .Include(ac => ac.MemberActualLeave!).ThenInclude(a => a.ActualLeave)
+                                      .ThenInclude(r => r.ReasonCode)
+                                      .AsQueryable();
                     var data = await toData.ToListAsync(cancellationToken);
                     var mapData = _mapper.Map<List<MemberResponse>>(data);
 

@@ -5,6 +5,8 @@ namespace Application.Feature
     public class MemberAdvanceLeaveResponse : IEntityResponse
     {
         public Guid Id { get; set; }
+        public string? ReasonCode { get; set; }
+        public string? ReasonCodeDescription { get; set; }
         public double Remaining { get; set; }
         public DateTimeOffset FromDate { get; set; }
         public DateTimeOffset ToDate { get; set; }
@@ -14,7 +16,7 @@ namespace Application.Feature
         public string? Username { get; set; }
         public string? Departerment { get; set; }
         public string? Position { get; set; }
-        public string Description { get; set; } = string.Empty;
+        public string? Description { get; set; }
         public DateTimeOffset CreatedDate { get; set; }
         public DateTimeOffset? ModifiedDate { get; set; }
         public Guid CreatedUserId { get; set; }

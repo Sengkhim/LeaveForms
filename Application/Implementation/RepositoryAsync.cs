@@ -22,11 +22,17 @@ namespace Application.Implementation
             await _context.Set<TEntity>().AddAsync(entity);
             return entity;
         }
-
         public Task DeleteAsync(TEntity entity)
         {
-            _context.Entry(entity).State = EntityState.Detached;
+            _context.Entry(entity).State = EntityState.Deleted;
             _context.Set<TEntity>().Remove(entity);
+            return Task.CompletedTask;
+        }
+
+        public Task DeleteByIdAsync(Guid Id)
+        {
+           var data = _context.Set<TEntity>().FindAsync(Id);
+           _context.Set<TEntity>().Remove(data.Result!);
             return Task.CompletedTask;
         }
 
@@ -46,10 +52,11 @@ namespace Application.Implementation
             return await _context.Set<TEntity>().FindAsync(id);
         }
 
-        public async Task<IEnumerable<TEntity>> GetPagedResponseAsync(int pageNumber, int pageSize)
+        public async Task<IQueryable<TEntity>> GetPagedResponseAsync(int pageNumber, int pageSize)
         {
-            return await _context.Set<TEntity>().Skip((pageNumber - 1) * pageSize)
-                                 .Take(pageSize).AsNoTracking().ToListAsync();
+            var query  = _context.Set<TEntity>().Skip((pageNumber - 1) * pageSize)
+                                 .Take(pageSize).AsNoTracking().AsQueryable();
+            return await Task.FromResult(query);
         }
 
         public IQueryable<TEntity> GetToQueryable()

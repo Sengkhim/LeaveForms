@@ -1,11 +1,8 @@
-﻿
-using Application.Repositery;
+﻿using Application.Repositery;
 using Domain.Authentication;
-using Domain.Entites;
 using Microsoft.AspNetCore.Identity;
 using Presistance.DataBase;
 using System.Collections;
-using System.Data;
 using System.Data.Entity;
 
 namespace Application.Implementation
@@ -25,14 +22,12 @@ namespace Application.Implementation
             _manager = manager;
         }
 
+        public IDataContext Context => _context!;
 
         public async Task<int> CommitAsync(CancellationToken cancellationToken) 
             => await _context!.SaveChangesAsync(cancellationToken);
 
-        public IDbConnection DbConnector()
-        {
-            return _context!.Connection;
-        }
+        public async Task<int> Commit() => await Task.FromResult(_context!.SaveChanges());
 
         public void Dispose()
         {
@@ -48,29 +43,6 @@ namespace Application.Implementation
                     _context!.Dispose();
             //dispose unmanaged resources
             disposed = true;
-        }
-
-        public async Task<Period> GetOrCreatePeriodAsync(DateTimeOffset? beginDate, DateTimeOffset? endDate)
-        {
-            var user = await GetUser();
-            if (user is null) throw new QueryException("Unable to get user subscription");
-            var period = await _context!.Set<Period>()
-                .Where(e => e.UserId == user.Id)
-                .FirstOrDefaultAsync(e => e.BeginDate == beginDate && e.EndDate == endDate);
-            if (period is null)
-            {
-                await _context.Set<Period>().AddAsync(period = new Period
-                {
-                    UserId = user.Id,
-                    BeginDate = beginDate,
-                    EndDate = endDate,
-                    Description = $"Create period during {beginDate} to {endDate}"
-                });
-                var commitAsync = await _context.SaveChangesAsync();
-                if (commitAsync == 0) return null;
-            }
-
-            return period;
         }
 
         public async Task<User> GetUser()

@@ -8,7 +8,7 @@ namespace Application.Mapping
     {
         public PositionProfile()
         {
-            //CreateMap<Position, PositionResponse>().ReverseMap();
+            CreateMap<Position, PositionResponse>().ReverseMap();
         }
     }
 }

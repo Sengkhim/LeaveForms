@@ -1,7 +1,6 @@
 ﻿using Domain;
 using Domain.Authentication;
 using Domain.Entites;
-using Domain.Entites.Postition;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -52,7 +51,7 @@ namespace Presistance.DataBase
         ///     Saves the changes made to the context.
         /// </summary>
         /// <returns></returns>
-        int SaveChanges();
+        Task<int> SaveChanges();
 
         /// <summary>
         ///     Saves the changes made to the context.
@@ -63,17 +62,14 @@ namespace Presistance.DataBase
 
         DbSet<Member> Members { get; set; }
         DbSet<Position> Position { get; set; }
-        DbSet<PositionMember> PositionMember { get; set; }
         DbSet<ReasonCode> ReasonCode { get; set; }
         DbSet<Period> Period { get; set; }
-        DbSet<Leave> Leave { get; set; }
         DbSet<LeaveType> LeaveType { get; set; }
-        DbSet<Departerment> Departerment { get; set; }
-        DbSet<DepartermentMember> DepartermentMember { get; set; }
+        DbSet<Department> Departerment { get; set; }
         DbSet<ActualLeave> ActualLeave { get; set; }
-        DbSet<MemberActualLeave> MemberActualLeave { get; set; }
+        DbSet<MemberActualLeave> UserActualLeave { get; set; }
         DbSet<AdvanceLeave> AdvanceLeave { get; set; }
-        DbSet<MemberAdvanceLeave> TestAdvances { get; set; }
+        DbSet<MemberAdvanceLeave> UserAdvanceLeave { get; set; }
         DbSet<Project> Project { get; set; }
         DbSet<Working> Working { get; set; }
         DbSet<WorkingType> WorkingType { get; set; }

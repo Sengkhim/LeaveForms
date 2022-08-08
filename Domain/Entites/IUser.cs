@@ -8,14 +8,4 @@ namespace Domain
     {
         public Guid Id { get; set; }
     }
-
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public interface EntityUser
-    {
-        public Guid UserId { get; set; }
-        public User? User { get; set; }
-    }
 }
