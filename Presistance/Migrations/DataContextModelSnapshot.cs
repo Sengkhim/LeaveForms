@@ -298,31 +298,6 @@ namespace Presistance.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("Users", "db");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("434c71ce-64fe-4a71-83ea-d61cb7b1f571"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "2708d6d2-9657-423a-bb75-34be3b1e2821",
-                            CreatedDate = new DateTimeOffset(new DateTime(2022, 7, 12, 10, 24, 47, 840, DateTimeKind.Unspecified).AddTicks(3829), new TimeSpan(0, 7, 0, 0, 0)),
-                            Email = "benz@gmail.com",
-                            EmailConfirmed = true,
-                            FirstName = "BenZ",
-                            LastName = "UTC",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "BENZ@GMAIL.COM",
-                            NormalizedUserName = "BENZ",
-                            PasswordHash = "AQAAAAEAACcQAAAAEL9cktyP+gHmmzf9H/EDjjVr7yan9Xo8kNhEBsfAC2o4xxxuluEo71+aVTpUB7YG7Q==",
-                            PhoneNumber = "012273893",
-                            PhoneNumberConfirmed = true,
-                            RefreshToken = "WPOJONETW3HXSDNK4LQR47BNYJSG7OFG",
-                            RefreshTokenExpiryTime = new DateTime(9999, 12, 31, 23, 59, 59, 999, DateTimeKind.Unspecified).AddTicks(9999),
-                            SecurityStamp = "WPOJONETW3HXSDNK4LQR47BNYJSG7OFG",
-                            Status = true,
-                            TwoFactorEnabled = false,
-                            UserName = "BenZ"
-                        });
                 });
 
             modelBuilder.Entity("Domain.Authentication.UserClaim", b =>

@@ -41,7 +41,7 @@ namespace Presistance.DataBase
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-4OH8OSU;Initial Catalog=LeavePlatform;Persist Security Info=True;User ID=sa;Password=12345");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-GQBQ7R6\\SQLEXPRESS;Initial Catalog=LeavePlatform;Persist Security Info=True;User ID=sa;Password=168168");
             }
         }
 

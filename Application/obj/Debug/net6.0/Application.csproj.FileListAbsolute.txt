@@ -82,24 +82,3 @@ D:\Project\ASP.NET\Asp.net Core web api\Application Programming interface\LeaveF
 D:\Project\ASP.NET\Asp.net Core web api\Application Programming interface\LeaveForms\Application\obj\Debug\net6.0\ref\Application.dll
 D:\Project\ASP.NET\Asp.net Core web api\Application Programming interface\LeaveForms\Application\obj\Debug\net6.0\Application.pdb
 D:\Project\ASP.NET\Asp.net Core web api\Application Programming interface\LeaveForms\Application\obj\Debug\net6.0\Application.genruntimeconfig.cache
-D:\Projects\BackEnd\LeaveForms\Application\bin\Debug\net6.0\Application.deps.json
-D:\Projects\BackEnd\LeaveForms\Application\bin\Debug\net6.0\Application.runtimeconfig.json
-D:\Projects\BackEnd\LeaveForms\Application\bin\Debug\net6.0\Application.dll
-D:\Projects\BackEnd\LeaveForms\Application\bin\Debug\net6.0\Application.pdb
-D:\Projects\BackEnd\LeaveForms\Application\bin\Debug\net6.0\Domain.dll
-D:\Projects\BackEnd\LeaveForms\Application\bin\Debug\net6.0\Presistance.dll
-D:\Projects\BackEnd\LeaveForms\Application\bin\Debug\net6.0\Share.dll
-D:\Projects\BackEnd\LeaveForms\Application\bin\Debug\net6.0\Domain.pdb
-D:\Projects\BackEnd\LeaveForms\Application\bin\Debug\net6.0\Presistance.pdb
-D:\Projects\BackEnd\LeaveForms\Application\bin\Debug\net6.0\Share.pdb
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\Application.dll
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\refint\Application.dll
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\Application.pdb
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\Application.genruntimeconfig.cache
-D:\Projects\BackEnd\LeaveForms\Application\obj\Debug\net6.0\ref\Application.dll
