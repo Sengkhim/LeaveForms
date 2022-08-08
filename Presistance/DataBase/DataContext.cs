@@ -2,7 +2,6 @@
 using Domain.Authentication;
 using Domain.Entites;
 using Domain.Entites.BaseEntity;
-using Domain.Entites.Postition;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
@@ -22,23 +21,20 @@ namespace Presistance.DataBase
             _currentUser = currentUser;
         }
         #region Entity Dbset
-        public IDbConnection Connection => Database.GetDbConnection();
         public DbSet<Member> Members { get ; set ; }
         public DbSet<Position> Position { get ; set ; }
-        public DbSet<PositionMember> PositionMember { get ; set ; }
         public DbSet<ReasonCode> ReasonCode { get ; set ; }
         public DbSet<Period> Period { get ; set ; }
-        public DbSet<Leave> Leave { get ; set ; }
+
         public DbSet<LeaveType> LeaveType { get ; set ; }
-        public DbSet<Departerment> Departerment { get ; set ; }
-        public DbSet<DepartermentMember> DepartermentMember { get ; set ; }
+        public DbSet<Department> Departerment { get ; set ; }
         public DbSet<ActualLeave> ActualLeave { get ; set ; }
         public DbSet<AdvanceLeave> AdvanceLeave { get ; set ; }
         public DbSet<Project> Project { get ; set ; }
         public DbSet<Working> Working { get ; set ; }
         public DbSet<WorkingType> WorkingType { get ; set ; }
-        public DbSet<MemberActualLeave> MemberActualLeave { get ; set ; }
-        public DbSet<MemberAdvanceLeave> TestAdvances { get; set; }
+        public DbSet<MemberActualLeave> UserActualLeave { get ; set ; }
+        public DbSet<MemberAdvanceLeave> UserAdvanceLeave { get; set; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -61,6 +57,7 @@ namespace Presistance.DataBase
             builder.Entity<UserLogin>().ToTable("UserLogins", "db");
             builder.Entity<RoleClaim>().ToTable("RoleClaims", "db");
             builder.Entity<UserToken>().ToTable("UserTokens", "db");
+            builder.Entity<AdvanceLeave>().ToTable("AdvanceLeave", "db").HasKey(e => e.Id);
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
             var cascade = builder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())
@@ -68,11 +65,16 @@ namespace Presistance.DataBase
             foreach (var c in cascade) c.DeleteBehavior = DeleteBehavior.NoAction;
         }
 
+        public override int SaveChanges()
+        {
+            return base.SaveChanges();
+        }
+
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
         
         {
             var entries = ChangeTracker.Entries<Entity<Guid>>().Where(e => e.State == EntityState.Added 
-            || e.State == EntityState.Modified).ToList();
+            || e.State == EntityState.Modified || e.State == EntityState.Deleted).ToList();
             if (entries is not null)
             {
                 foreach (var entityEntry in entries)
@@ -87,10 +89,19 @@ namespace Presistance.DataBase
                             entityEntry.Entity.ModifiedDate = DateTimeOffset.UtcNow;
                             entityEntry.Entity.ModifiedUserId = _currentUser.UserId;
                             break;
+                        case EntityState.Deleted:
+                            entityEntry.Entity.ModifiedDate = DateTimeOffset.UtcNow;
+                            entityEntry.Entity.ModifiedUserId = _currentUser.UserId;
+                            break;
                     }
                 }
             }
             return await base.SaveChangesAsync(cancellationToken);
+        }
+
+        Task<int> IDataContext.SaveChanges()
+        {
+            return Task.FromResult(SaveChanges());
         }
     }
 }

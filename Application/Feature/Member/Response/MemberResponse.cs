@@ -1,5 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
+﻿
 namespace Application.Feature
 {
     public class MemberResponse
@@ -11,7 +10,6 @@ namespace Application.Feature
         public string? Departerment { get; set; }
         public string? Position { get; set; }
         public string? Email { get; set; }
-        public bool Status { get; set; }
         public string? PhoneNumber { get; set; }
         public string? Code { get; set; }
         public string? Description { get; set; }
@@ -20,5 +18,6 @@ namespace Application.Feature
         public Guid CreatedUserId { get; set; }
         public Guid? ModifiedUserId { get; set; }
         public ICollection<MemberAdvanceLeaveResponse>? MemberAdvanceLeaveResponse { get; set; }
+        public ICollection<MemberActaulLeaveResponse>? MemberActaulLeaveResponse { get; set; }
     }
 }

@@ -1,8 +1,4 @@
-﻿using Application.Feature;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Servers.Controllers.Mid;
-using Share.Permission;
+﻿using Servers.Controllers.Mid;
 
 namespace Servers.Controllers.Period
 {

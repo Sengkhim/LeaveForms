@@ -13,5 +13,6 @@ namespace Domain.Entites.BaseEntity
         public DateTimeOffset? ModifiedDate { get; set; }
         public Guid CreatedUserId { get; set; }
         public Guid? ModifiedUserId { get; set; }
+        public bool IsDeleted { get; set; } 
     }
 }

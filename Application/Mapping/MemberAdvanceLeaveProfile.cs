@@ -9,14 +9,21 @@ namespace Application.Mapping
     {
         public AdvanceLeaveProfile()
         {
-            CreateMap<AdvanceLeave, AdvanceLeaveResponse>().ReverseMap();
+            CreateMap<AdvanceLeave, AdvanceLeaveResponse>()
+            .ForMember(r => r.MemberAdvanceLeaveResponse, source => source.MapFrom(source => source.MemberAdvanceLeave));
+
             CreateMap<MemberAdvanceLeave, MemberAdvanceLeaveResponse>()
-            .ForMember<string>(r => r.FirstName, source => source.MapFrom<string>(source => source.Member.User!.FirstName))
-            .ForMember<string>(r => r.LastName, source => source.MapFrom<string>(source => source.Member.User!.LastName))
-            .ForMember<string>(r => r.Username, source => source.MapFrom(source => source.Member.User!.UserName))
-            .ForMember<string>(r => r.Position, source => source.MapFrom<string>(source => source.Member.Position!.Name))
-            .ForMember(r => r.FromDate, source => source.MapFrom(source => source.AdvanceLeave.FromDate))
-            .ForMember(r => r.ToDate, source => source.MapFrom(source => source.AdvanceLeave.ToDate));
+            .ForMember(r => r.FirstName, source => source.MapFrom(source => source.Member!.User!.FirstName))
+            .ForMember(r => r.LastName, source => source.MapFrom(source => source.Member!.User!.LastName))
+            .ForMember(r => r.Username, source => source.MapFrom(source => source.Member!.User!.UserName))
+            .ForMember(r => r.Departerment, source => source.MapFrom(source => source.Member!.Departerment!.Name))
+            .ForMember(r => r.Description, source => source.MapFrom(source => source.Member!.Description))
+            .ForMember(r => r.Position, source => source.MapFrom(source => source.Member!.Position!.Name))
+            .ForMember(r => r.FromDate, source => source.MapFrom(source => source.AdvanceLeave!.FromDate))
+            .ForMember(r => r.ReasonCode, source => source.MapFrom(source => source.AdvanceLeave!.ReasonCode!.Code))
+            .ForMember(r => r.ReasonCodeDescription, source => source.MapFrom(source => source.AdvanceLeave!.ReasonCode!.Description))
+            .ForMember(r => r.ToDate, source => source.MapFrom(source => source.AdvanceLeave!.ToDate));
+           
         }
     }
                

@@ -7,10 +7,11 @@ namespace Application.Repositery
         IQueryable<TEntity> Entities { get; }
         Task<TEntity?> GetByIdAsync(Guid id);
         Task<IEnumerable<TEntity>> GetAllAsync();
-        Task<IEnumerable<TEntity>> GetPagedResponseAsync(int pageNumber, int pageSize);
+        Task<IQueryable<TEntity>> GetPagedResponseAsync(int pageNumber, int pageSize);
         Task<TEntity> AddAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
         Task DeleteAsync(TEntity entity);
+        Task DeleteByIdAsync(Guid Id);
         IQueryable<TEntity> GetToQueryable();
         Task<IQueryable<TEntity>?> FindAsync(Expression<Func<TEntity, bool>> Expression);
     }
