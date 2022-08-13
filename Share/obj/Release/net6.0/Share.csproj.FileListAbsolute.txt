@@ -1,0 +1,12 @@
+D:\Projects\BackEnd\LeaveForms\Share\bin\Release\net6.0\Share.deps.json
+D:\Projects\BackEnd\LeaveForms\Share\bin\Release\net6.0\Share.dll
+D:\Projects\BackEnd\LeaveForms\Share\bin\Release\net6.0\Share.pdb
+D:\Projects\BackEnd\LeaveForms\Share\obj\Release\net6.0\Share.csproj.AssemblyReference.cache
+D:\Projects\BackEnd\LeaveForms\Share\obj\Release\net6.0\Share.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\BackEnd\LeaveForms\Share\obj\Release\net6.0\Share.AssemblyInfoInputs.cache
+D:\Projects\BackEnd\LeaveForms\Share\obj\Release\net6.0\Share.AssemblyInfo.cs
+D:\Projects\BackEnd\LeaveForms\Share\obj\Release\net6.0\Share.csproj.CoreCompileInputs.cache
+D:\Projects\BackEnd\LeaveForms\Share\obj\Release\net6.0\Share.dll
+D:\Projects\BackEnd\LeaveForms\Share\obj\Release\net6.0\refint\Share.dll
+D:\Projects\BackEnd\LeaveForms\Share\obj\Release\net6.0\Share.pdb
+D:\Projects\BackEnd\LeaveForms\Share\obj\Release\net6.0\ref\Share.dll

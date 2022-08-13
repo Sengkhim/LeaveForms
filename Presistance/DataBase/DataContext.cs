@@ -2,6 +2,7 @@
 using Domain.Authentication;
 using Domain.Entites;
 using Domain.Entites.BaseEntity;
+using Domain.Entites.Chat;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
@@ -35,6 +36,10 @@ namespace Presistance.DataBase
         public DbSet<WorkingType> WorkingType { get ; set ; }
         public DbSet<MemberActualLeave> UserActualLeave { get ; set ; }
         public DbSet<MemberAdvanceLeave> UserAdvanceLeave { get; set; }
+
+        //chatting entity
+        public DbSet<Room> Rooms { get ; set ; }
+        public DbSet<Message> Messages { get ; set ; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

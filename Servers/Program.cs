@@ -38,7 +38,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-app.MapHub<ChatHub>("/chathub");
+app.MapHub<Chat>("/chat");
 app.UseHangfireServer();
 app.Initialize(builder.Configuration);
 app.UseHangfireDashboard("/hangfire", new DashboardOptions{ });
