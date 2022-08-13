@@ -1,5 +1,7 @@
 ﻿
 using Application.Config;
+using Application.Conmon.Response.Identity;
+using Application.Hubs;
 using Application.Implementation;
 using Application.Implementation.Service;
 using Application.Repositery;
@@ -45,6 +47,7 @@ namespace Application.Extenstion
             services.AddScoped<IDatabaseSeeder, DatabaseSeeder>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IDataContext, DataContext>();
+            services.AddScoped<IChat<UserResponse>, Chat>();
 
             return services;
         }

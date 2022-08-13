@@ -66,3 +66,20 @@ D:\Project\ASP.NET\Asp.net Core web api\Application Programming interface\LeaveF
 D:\Project\ASP.NET\Asp.net Core web api\Application Programming interface\LeaveForms\Presistance\obj\Debug\net6.0\ref\Presistance.dll
 D:\Project\ASP.NET\Asp.net Core web api\Application Programming interface\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.pdb
 D:\Project\ASP.NET\Asp.net Core web api\Application Programming interface\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.genruntimeconfig.cache
+D:\Projects\BackEnd\LeaveForms\Presistance\bin\Debug\net6.0\Presistance.deps.json
+D:\Projects\BackEnd\LeaveForms\Presistance\bin\Debug\net6.0\Presistance.runtimeconfig.json
+D:\Projects\BackEnd\LeaveForms\Presistance\bin\Debug\net6.0\Presistance.dll
+D:\Projects\BackEnd\LeaveForms\Presistance\bin\Debug\net6.0\Presistance.pdb
+D:\Projects\BackEnd\LeaveForms\Presistance\bin\Debug\net6.0\Domain.dll
+D:\Projects\BackEnd\LeaveForms\Presistance\bin\Debug\net6.0\Domain.pdb
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.csproj.AssemblyReference.cache
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.AssemblyInfoInputs.cache
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.AssemblyInfo.cs
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.csproj.CoreCompileInputs.cache
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.csproj.CopyComplete
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.dll
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\refint\Presistance.dll
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.pdb
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\Presistance.genruntimeconfig.cache
+D:\Projects\BackEnd\LeaveForms\Presistance\obj\Debug\net6.0\ref\Presistance.dll

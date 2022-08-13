@@ -79,7 +79,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("ActualLeave");
+                    b.ToTable("ActualLeave", (string)null);
                 });
 
             modelBuilder.Entity("Domain.AdvanceLeave", b =>
@@ -219,6 +219,9 @@ namespace Presistance.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("Avatar")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -298,31 +301,6 @@ namespace Presistance.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("Users", "db");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("434c71ce-64fe-4a71-83ea-d61cb7b1f571"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "2708d6d2-9657-423a-bb75-34be3b1e2821",
-                            CreatedDate = new DateTimeOffset(new DateTime(2022, 7, 12, 10, 24, 47, 840, DateTimeKind.Unspecified).AddTicks(3829), new TimeSpan(0, 7, 0, 0, 0)),
-                            Email = "benz@gmail.com",
-                            EmailConfirmed = true,
-                            FirstName = "BenZ",
-                            LastName = "UTC",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "BENZ@GMAIL.COM",
-                            NormalizedUserName = "BENZ",
-                            PasswordHash = "AQAAAAEAACcQAAAAEL9cktyP+gHmmzf9H/EDjjVr7yan9Xo8kNhEBsfAC2o4xxxuluEo71+aVTpUB7YG7Q==",
-                            PhoneNumber = "012273893",
-                            PhoneNumberConfirmed = true,
-                            RefreshToken = "WPOJONETW3HXSDNK4LQR47BNYJSG7OFG",
-                            RefreshTokenExpiryTime = new DateTime(9999, 12, 31, 23, 59, 59, 999, DateTimeKind.Unspecified).AddTicks(9999),
-                            SecurityStamp = "WPOJONETW3HXSDNK4LQR47BNYJSG7OFG",
-                            Status = true,
-                            TwoFactorEnabled = false,
-                            UserName = "BenZ"
-                        });
                 });
 
             modelBuilder.Entity("Domain.Authentication.UserClaim", b =>
@@ -471,7 +449,56 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Departerment");
+                    b.ToTable("Departerment", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entites.Chat.Message", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid?>("FromUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTimeOffset>("Timestamp")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("ToRoomId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FromUserId");
+
+                    b.HasIndex("ToRoomId");
+
+                    b.ToTable("Messages", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entites.Chat.Room", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Rooms", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entites.Period", b =>
@@ -511,7 +538,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Period");
+                    b.ToTable("Period", (string)null);
                 });
 
             modelBuilder.Entity("Domain.LeaveType", b =>
@@ -548,7 +575,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("LeaveType");
+                    b.ToTable("LeaveType", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Member", b =>
@@ -601,7 +628,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("PositonId");
 
-                    b.ToTable("Members");
+                    b.ToTable("Members", (string)null);
                 });
 
             modelBuilder.Entity("Domain.MemberActualLeave", b =>
@@ -641,7 +668,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("UserActualLeave");
+                    b.ToTable("UserActualLeave", (string)null);
                 });
 
             modelBuilder.Entity("Domain.MemberAdvanceLeave", b =>
@@ -681,7 +708,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("UserAdvanceLeave");
+                    b.ToTable("UserAdvanceLeave", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Position", b =>
@@ -718,7 +745,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Position");
+                    b.ToTable("Position", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Project", b =>
@@ -748,7 +775,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Project");
+                    b.ToTable("Project", (string)null);
                 });
 
             modelBuilder.Entity("Domain.ReasonCode", b =>
@@ -784,7 +811,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("ReasonCode");
+                    b.ToTable("ReasonCode", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Working", b =>
@@ -814,7 +841,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Working");
+                    b.ToTable("Working", (string)null);
                 });
 
             modelBuilder.Entity("Domain.WorkingType", b =>
@@ -844,7 +871,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("WorkingType");
+                    b.ToTable("WorkingType", (string)null);
                 });
 
             modelBuilder.Entity("Domain.ActualLeave", b =>
@@ -995,6 +1022,34 @@ namespace Presistance.Migrations
                     b.Navigation("CreateUser");
 
                     b.Navigation("ModifiedUser");
+                });
+
+            modelBuilder.Entity("Domain.Entites.Chat.Message", b =>
+                {
+                    b.HasOne("Domain.Authentication.User", "FromUser")
+                        .WithMany("Messages")
+                        .HasForeignKey("FromUserId");
+
+                    b.HasOne("Domain.Entites.Chat.Room", "ToRoom")
+                        .WithMany("Messages")
+                        .HasForeignKey("ToRoomId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("FromUser");
+
+                    b.Navigation("ToRoom");
+                });
+
+            modelBuilder.Entity("Domain.Entites.Chat.Room", b =>
+                {
+                    b.HasOne("Domain.Authentication.User", "User")
+                        .WithMany("Rooms")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entites.Period", b =>
@@ -1236,6 +1291,15 @@ namespace Presistance.Migrations
             modelBuilder.Entity("Domain.Authentication.User", b =>
                 {
                     b.Navigation("Member");
+
+                    b.Navigation("Messages");
+
+                    b.Navigation("Rooms");
+                });
+
+            modelBuilder.Entity("Domain.Entites.Chat.Room", b =>
+                {
+                    b.Navigation("Messages");
                 });
 
             modelBuilder.Entity("Domain.Member", b =>

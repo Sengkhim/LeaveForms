@@ -1,6 +1,7 @@
 ﻿using Domain;
 using Domain.Authentication;
 using Domain.Entites;
+using Domain.Entites.Chat;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -73,6 +74,10 @@ namespace Presistance.DataBase
         DbSet<Project> Project { get; set; }
         DbSet<Working> Working { get; set; }
         DbSet<WorkingType> WorkingType { get; set; }
+
+        //chat
+        DbSet<Room> Rooms { get; set; }
+        DbSet<Message> Messages { get; set; }
 
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
         EntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class;

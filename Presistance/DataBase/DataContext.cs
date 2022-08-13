@@ -2,6 +2,7 @@
 using Domain.Authentication;
 using Domain.Entites;
 using Domain.Entites.BaseEntity;
+using Domain.Entites.Chat;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
@@ -35,13 +36,17 @@ namespace Presistance.DataBase
         public DbSet<WorkingType> WorkingType { get ; set ; }
         public DbSet<MemberActualLeave> UserActualLeave { get ; set ; }
         public DbSet<MemberAdvanceLeave> UserAdvanceLeave { get; set; }
+
+        //chatting entity
+        public DbSet<Room> Rooms { get ; set ; }
+        public DbSet<Message> Messages { get ; set ; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-4OH8OSU;Initial Catalog=LeavePlatform;Persist Security Info=True;User ID=sa;Password=12345");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-GQBQ7R6\\SQLEXPRESS;Initial Catalog=LeavePlatform;Persist Security Info=True;User ID=sa;Password=168168");
             }
         }
 

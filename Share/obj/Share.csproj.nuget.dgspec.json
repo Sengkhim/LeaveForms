@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj": {}
+    "D:\\Projects\\BackEnd\\LeaveForms\\Share\\Share.csproj": {}
   },
   "projects": {
-    "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj": {
+    "D:\\Projects\\BackEnd\\LeaveForms\\Share\\Share.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj",
+        "projectUniqueName": "D:\\Projects\\BackEnd\\LeaveForms\\Share\\Share.csproj",
         "projectName": "Share",
-        "projectPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\Share.csproj",
-        "packagesPath": "C:\\Users\\khimu\\.nuget\\packages\\",
-        "outputPath": "D:\\Project\\ASP.NET\\Asp.net Core web api\\Application Programming interface\\LeaveForms\\Share\\obj\\",
+        "projectPath": "D:\\Projects\\BackEnd\\LeaveForms\\Share\\Share.csproj",
+        "packagesPath": "C:\\Users\\atech\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\BackEnd\\LeaveForms\\Share\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\khimu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\atech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
