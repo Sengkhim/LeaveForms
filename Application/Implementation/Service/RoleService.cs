@@ -102,7 +102,7 @@ namespace Application.Implementation.Service
 
         public async Task<IResponse<RoleResponse>> GetByIdAsync(string id)
         {
-            var roles = await _roleManager.Roles.SingleOrDefaultAsync(x => x.Id == Guid.Parse((ReadOnlySpan<char>)id));
+            var roles = await _roleManager.Roles.SingleOrDefaultAsync(x => x.Id == Guid.Parse(id));
             var rolesResponse = _mapper.Map<RoleResponse>(roles);
             return await Response<RoleResponse>.SuccessAsync(rolesResponse);
         }
@@ -124,7 +124,7 @@ namespace Application.Implementation.Service
             try
             {
                 var find = await _roleManager.FindByIdAsync(request.Id);
-                if (find == null) return await Response<string>.FailAsync(_localizer["Obejct is null."]);
+                if (find == null) return await Response<string>.FailAsync(_localizer["Object is null."]);
 
                 find.Name = request.Name;
                 find.Description = request.Description;
