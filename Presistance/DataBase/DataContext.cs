@@ -5,7 +5,6 @@ using Domain.Entites.BaseEntity;
 using Domain.Entites.Chat;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Data;
 using System.Reflection;
 
 namespace Presistance.DataBase
@@ -28,7 +27,7 @@ namespace Presistance.DataBase
         public DbSet<Period> Period { get ; set ; }
 
         public DbSet<LeaveType> LeaveType { get ; set ; }
-        public DbSet<Department> Departerment { get ; set ; }
+        public DbSet<Department> Department { get ; set ; }
         public DbSet<ActualLeave> ActualLeave { get ; set ; }
         public DbSet<AdvanceLeave> AdvanceLeave { get ; set ; }
         public DbSet<Project> Project { get ; set ; }
@@ -44,9 +43,10 @@ namespace Presistance.DataBase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            var connectionString = "Server=sqlserver,1433;Database=LeavePlatform;User=sa;Password=password@12345#;";
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-GQBQ7R6\\SQLEXPRESS;Initial Catalog=LeavePlatform;Persist Security Info=True;User ID=sa;Password=168168");
+                optionsBuilder.UseSqlServer(connectionString);
             }
         }
 

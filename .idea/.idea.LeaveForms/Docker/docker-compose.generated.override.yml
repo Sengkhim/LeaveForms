@@ -1,0 +1,23 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  servers:
+    build:
+      context: "D:\\WorkSpace\\DockerIntegration\\LeaveForms\\Servers"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net6.0/Servers.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+      NUGET_PACKAGES: "C:\\Users\\ASUS\\.nuget\\packages"
+      NUGET_FALLBACK_PACKAGES: "C:\\Users\\ASUS\\.nuget\\packages"
+    image: "leave_platform_container:dev"
+    ports: []
+    volumes:
+    - "C:\\Users\\ASUS\\.nuget\\packages:/root/.nuget/fallbackpackages"
+    - "D:\\WorkSpace\\DockerIntegration\\LeaveForms\\Servers:/app:rw"
+    - "D:\\WorkSpace\\DockerIntegration\\LeaveForms:/src:rw"
+    working_dir: "/app"
