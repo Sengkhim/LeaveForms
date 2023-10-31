@@ -3,7 +3,9 @@ using Application.Repositery;
 using Domain;
 using Domain.Enumerable;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Share.Wapper;
+using System.Security.Claims;
 
 namespace Application.Feature
 {
@@ -19,14 +21,23 @@ namespace Application.Feature
         public class Handler : IRequestHandler<AddActualLeaveCommand, IResponse>
         {
             private readonly IUnitOfWork _unit;
-            public Handler(IUnitOfWork unit) => _unit = unit;
+            private readonly IHttpContextAccessor _httpContext;
+
+            public Handler(IUnitOfWork unit, IHttpContextAccessor httpContext)
+            {
+                _unit = unit;
+                _httpContext = httpContext;
+            }
+
             public async Task<IResponse> Handle(AddActualLeaveCommand request, CancellationToken cancellationToken)
             {
 
                 if (request is null) return await Response<Guid>.FailAsync("Request object can not null!");
+                var userId = _httpContext.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)!.Value;
                 var entity = new ActualLeave
                 {
                     Id = Guid.NewGuid(),
+                    UserId = Guid.Parse(userId!),
                     LeaveTypeId = request.LeaveTypeId,
                     ReasonCodeId = request.ReasonCodeId,
                     FromDate = request.FromDate,

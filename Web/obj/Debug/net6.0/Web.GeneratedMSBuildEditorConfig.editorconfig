@@ -5,56 +5,57 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Web
 build_property.RootNamespace = Web
-build_property.ProjectDir = D:\Projects\BackEnd\LeaveForms\Web\
+build_property.ProjectDir = D:\WorkSpace\DockerIntegration\LeaveForms\Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Projects\BackEnd\LeaveForms\Web
+build_property.MSBuildProjectDirectory = D:\WorkSpace\DockerIntegration\LeaveForms\Web
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Projects/BackEnd/LeaveForms/Web/App.razor]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/BackEnd/LeaveForms/Web/Pages/Counter.razor]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/BackEnd/LeaveForms/Web/Pages/FetchData.razor]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/BackEnd/LeaveForms/Web/Pages/Index.razor]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/BackEnd/LeaveForms/Web/Shared/SurveyPrompt.razor]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/BackEnd/LeaveForms/Web/_Imports.razor]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/BackEnd/LeaveForms/Web/Shared/MainLayout.razor]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-8ahen79ohv
 
-[D:/Projects/BackEnd/LeaveForms/Web/Shared/NavMenu.razor]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-06vxonwb36
 
-[D:/Projects/BackEnd/LeaveForms/Web/Pages/Error.cshtml]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/BackEnd/LeaveForms/Web/Pages/_Host.cshtml]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Projects/BackEnd/LeaveForms/Web/Pages/_Layout.cshtml]
+[D:/WorkSpace/DockerIntegration/LeaveForms/Web/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

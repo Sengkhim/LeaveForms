@@ -1,5 +1,4 @@
 ﻿using Domain.Authentication;
-using Domain.Entites;
 using Domain.Entites.BaseEntity;
 using System.ComponentModel.DataAnnotations.Schema;
 

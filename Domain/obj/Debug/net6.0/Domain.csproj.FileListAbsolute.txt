@@ -57,3 +57,15 @@ D:\Projects\BackEnd\LeaveForms\Domain\obj\Debug\net6.0\Domain.dll
 D:\Projects\BackEnd\LeaveForms\Domain\obj\Debug\net6.0\refint\Domain.dll
 D:\Projects\BackEnd\LeaveForms\Domain\obj\Debug\net6.0\Domain.pdb
 D:\Projects\BackEnd\LeaveForms\Domain\obj\Debug\net6.0\ref\Domain.dll
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\bin\Debug\net6.0\Domain.dll
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\bin\Debug\net6.0\Domain.pdb
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\obj\Debug\net6.0\Domain.dll
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\obj\Debug\net6.0\Domain.pdb
+D:\WorkSpace\DockerIntegration\LeaveForms\Domain\obj\Debug\net6.0\ref\Domain.dll

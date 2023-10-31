@@ -79,7 +79,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("ActualLeave", (string)null);
+                    b.ToTable("ActualLeave");
                 });
 
             modelBuilder.Entity("Domain.AdvanceLeave", b =>
@@ -449,7 +449,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Departerment", (string)null);
+                    b.ToTable("Departerment");
                 });
 
             modelBuilder.Entity("Domain.Entites.Chat.Message", b =>
@@ -538,7 +538,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Period", (string)null);
+                    b.ToTable("Period");
                 });
 
             modelBuilder.Entity("Domain.LeaveType", b =>
@@ -575,7 +575,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("LeaveType", (string)null);
+                    b.ToTable("LeaveType");
                 });
 
             modelBuilder.Entity("Domain.Member", b =>
@@ -628,7 +628,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("PositonId");
 
-                    b.ToTable("Members", (string)null);
+                    b.ToTable("Members");
                 });
 
             modelBuilder.Entity("Domain.MemberActualLeave", b =>
@@ -668,7 +668,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("UserActualLeave", (string)null);
+                    b.ToTable("UserActualLeave");
                 });
 
             modelBuilder.Entity("Domain.MemberAdvanceLeave", b =>
@@ -708,7 +708,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("UserAdvanceLeave", (string)null);
+                    b.ToTable("UserAdvanceLeave");
                 });
 
             modelBuilder.Entity("Domain.Position", b =>
@@ -745,7 +745,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Position", (string)null);
+                    b.ToTable("Position");
                 });
 
             modelBuilder.Entity("Domain.Project", b =>
@@ -775,7 +775,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Project", (string)null);
+                    b.ToTable("Project");
                 });
 
             modelBuilder.Entity("Domain.ReasonCode", b =>
@@ -811,7 +811,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("ReasonCode", (string)null);
+                    b.ToTable("ReasonCode");
                 });
 
             modelBuilder.Entity("Domain.Working", b =>
@@ -841,7 +841,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Working", (string)null);
+                    b.ToTable("Working");
                 });
 
             modelBuilder.Entity("Domain.WorkingType", b =>
@@ -871,7 +871,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("WorkingType", (string)null);
+                    b.ToTable("WorkingType");
                 });
 
             modelBuilder.Entity("Domain.ActualLeave", b =>
