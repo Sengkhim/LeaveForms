@@ -449,7 +449,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Departerment");
+                    b.ToTable("Department");
                 });
 
             modelBuilder.Entity("Domain.Entites.Chat.Message", b =>

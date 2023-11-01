@@ -64,29 +64,21 @@ namespace Application.Extenstion
         
             return services;
         }
-        public static IServiceCollection AddMapping(this IServiceCollection services)
-        {
-            var mapperConfig = new MapperConfiguration(mc =>
-            {
-                mc.AddProfile(new Mapper());
-            });
-
-            IMapper mapper = mapperConfig.CreateMapper();
-            services.AddSingleton(mapper);
-            return services;
-        }
+        
         public static AppConfig GetApplicationSettings(this IServiceCollection services, IConfiguration configuration)
         {
             var applicationSettingsConfiguration = configuration.GetSection(nameof(AppConfig));
             services.Configure<AppConfig>(applicationSettingsConfiguration);
             return applicationSettingsConfiguration.Get<AppConfig>();
         }
+        
         public static MailConfiguration AddMailConfig(this IServiceCollection services, IConfiguration configuration)
         {
             var config = configuration.GetSection(nameof(MailConfiguration));
             services.Configure<MailConfiguration>(config);
             return config.Get<MailConfiguration>();
         }
+        
         public static IServiceCollection AddIdentity(this IServiceCollection services)
         {
             services.Configure<DataProtectionTokenProviderOptions>(options =>

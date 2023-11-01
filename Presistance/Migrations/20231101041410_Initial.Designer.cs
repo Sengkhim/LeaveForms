@@ -12,8 +12,8 @@ using Presistance.DataBase;
 namespace Presistance.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231031084548_FirstCommand")]
-    partial class FirstCommand
+    [Migration("20231101041410_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -451,7 +451,7 @@ namespace Presistance.Migrations
 
                     b.HasIndex("ModifiedUserId");
 
-                    b.ToTable("Departerment");
+                    b.ToTable("Department");
                 });
 
             modelBuilder.Entity("Domain.Entites.Chat.Message", b =>

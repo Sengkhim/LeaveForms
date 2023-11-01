@@ -25,7 +25,6 @@ namespace Presistance.DataBase
         public DbSet<Position> Position { get ; set ; }
         public DbSet<ReasonCode> ReasonCode { get ; set ; }
         public DbSet<Period> Period { get ; set ; }
-
         public DbSet<LeaveType> LeaveType { get ; set ; }
         public DbSet<Department> Department { get ; set ; }
         public DbSet<ActualLeave> ActualLeave { get ; set ; }

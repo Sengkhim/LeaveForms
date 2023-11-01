@@ -7,9 +7,9 @@ using Share.Wapper;
 
 namespace Application.Feature
 {
-    public class GetAllDepartermentQuery  : IRequest<Response<List<DepartmentResponse>>>
+    public class GetAllDepartmentQuery  : IRequest<Response<List<DepartmentResponse>>>
     {
-        public class Handler : IRequestHandler<GetAllDepartermentQuery, Response<List<DepartmentResponse>>>
+        public class Handler : IRequestHandler<GetAllDepartmentQuery, Response<List<DepartmentResponse>>>
         {
             private readonly IMapper _mapper;
             private readonly IUnitOfWork _unitOf;
@@ -19,7 +19,7 @@ namespace Application.Feature
                 _unitOf = unitOf;
             }
 
-            public async Task<Response<List<DepartmentResponse>>> Handle(GetAllDepartermentQuery request,
+            public async Task<Response<List<DepartmentResponse>>> Handle(GetAllDepartmentQuery request,
                 CancellationToken cancellationToken)
             {
                 try
