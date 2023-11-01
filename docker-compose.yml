@@ -1,6 +1,6 @@
-﻿services:
+services:
   servers:
-    image: leave_platform_container
+    image: ${DOCKER_REGISTRY-}leaveforms
     container_name: leave_platform_api
     build:
       context: .
