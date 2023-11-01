@@ -27,8 +27,9 @@ jobs:
         with:
           context: .
           file: ./Dockerfile  # Adjust this if your Dockerfile is in a different location
-          push: false
-          tags: ${{ secrets.DOCKER_USERNAME }}/LeaveForms:build
+          target: build
+          load: true
+          # tags: ${{ secrets.DOCKER_USERNAME }}/LeaveForms:build
 
       - name: Build and push
         uses: docker/build-push-action@v2
