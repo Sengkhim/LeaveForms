@@ -35,4 +35,4 @@ jobs:
           context: .
           push: true
           target: final
-          tags: ${{ secrets.DOCKER_USERNAME }}/leave_platform_container:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
