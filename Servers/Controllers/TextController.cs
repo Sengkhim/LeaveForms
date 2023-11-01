@@ -9,6 +9,6 @@ public class TextController : ControllerBase
     [HttpGet("get-text")]
     public IActionResult GetText()
     {
-        return Ok("Hello new world");
+        return Ok("Welcome to CI/CD Pipeline");
     }
 }
