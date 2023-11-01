@@ -5,9 +5,9 @@ using Domain;
 
 namespace Application.Mapping
 {
-    public class DepartermentProfile : Profile
+    public class DepartmentProfile : Profile
     {
-        public DepartermentProfile()
+        public DepartmentProfile()
         {
             CreateMap<Department, DepartmentResponse>().ReverseMap();
         }

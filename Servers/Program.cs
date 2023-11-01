@@ -6,9 +6,7 @@ using Presistance.DataBase;
 using Servers.Extentsion;
 using Servers.Service;
 
-
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwagger();
@@ -25,9 +23,7 @@ builder.Services.AddHandFire(builder.Configuration);
 builder.Services.AddMailConfig(builder.Configuration);
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
-
 var app = builder.Build();
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -39,7 +35,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.MapHub<Chat>("/chat");
-app.UseHangfireServer();
 app.Initialize(builder.Configuration);
+app.AddMigrate();
+app.UseHangfireServer();
 app.UseHangfireDashboard("/hangfire", new DashboardOptions{ });
 app.Run();

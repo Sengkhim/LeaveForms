@@ -66,7 +66,7 @@ namespace Presistance.DataBase
         DbSet<ReasonCode> ReasonCode { get; set; }
         DbSet<Period> Period { get; set; }
         DbSet<LeaveType> LeaveType { get; set; }
-        DbSet<Department> Departerment { get; set; }
+        DbSet<Department> Department { get; set; }
         DbSet<ActualLeave> ActualLeave { get; set; }
         DbSet<MemberActualLeave> UserActualLeave { get; set; }
         DbSet<AdvanceLeave> AdvanceLeave { get; set; }
