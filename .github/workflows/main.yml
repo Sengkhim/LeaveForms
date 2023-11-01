@@ -37,4 +37,4 @@ jobs:
           context: .
           file: ./Dockerfile  # Adjust this if your Dockerfile is in a different location
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/LeaveForms:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/leaveforms:latest
