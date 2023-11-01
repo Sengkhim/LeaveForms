@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zY1BG5fg14oexxyYj46+XuwjikAR3+jywxG68Itxozf9RaU91+UC8YitBqNqpf3CQhNP1OfIR14ltsoTldcTSA==",
+  "dgSpecHash": "aeM99ClSx2PHEhXvFdGLKvrqF4oYB9Ps2GyVqp5MFym3NyL6H8g3OFXSE75CvBYgwsBO6VbFPJSXx0k/0dv+jA==",
   "success": true,
   "projectFilePath": "D:\\WorkSpace\\DockerIntegration\\LeaveForms\\Servers\\Servers.csproj",
   "expectedPackageFiles": [
@@ -80,6 +80,7 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.18.1\\microsoft.visualstudio.azure.containers.tools.targets.1.18.1.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\mimekit\\3.2.0\\mimekit.3.2.0.nupkg.sha512",

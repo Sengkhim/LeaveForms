@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Presistance.Migrations
 {
-    public partial class FirstCommand : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -90,7 +90,7 @@ namespace Presistance.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Departerment",
+                name: "Department",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -104,15 +104,15 @@ namespace Presistance.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Departerment", x => x.Id);
+                    table.PrimaryKey("PK_Department", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Departerment_Users_CreatedUserId",
+                        name: "FK_Department_Users_CreatedUserId",
                         column: x => x.CreatedUserId,
                         principalSchema: "db",
                         principalTable: "Users",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Departerment_Users_ModifiedUserId",
+                        name: "FK_Department_Users_ModifiedUserId",
                         column: x => x.ModifiedUserId,
                         principalSchema: "db",
                         principalTable: "Users",
@@ -463,9 +463,9 @@ namespace Presistance.Migrations
                 {
                     table.PrimaryKey("PK_Members", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Members_Departerment_DepartermentId",
+                        name: "FK_Members_Department_DepartermentId",
                         column: x => x.DepartermentId,
-                        principalTable: "Departerment",
+                        principalTable: "Department",
                         principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Members_Position_PositonId",
@@ -760,13 +760,13 @@ namespace Presistance.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Departerment_CreatedUserId",
-                table: "Departerment",
+                name: "IX_Department_CreatedUserId",
+                table: "Department",
                 column: "CreatedUserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Departerment_ModifiedUserId",
-                table: "Departerment",
+                name: "IX_Department_ModifiedUserId",
+                table: "Department",
                 column: "ModifiedUserId");
 
             migrationBuilder.CreateIndex(
@@ -1034,7 +1034,7 @@ namespace Presistance.Migrations
                 name: "ReasonCode");
 
             migrationBuilder.DropTable(
-                name: "Departerment");
+                name: "Department");
 
             migrationBuilder.DropTable(
                 name: "Position");
