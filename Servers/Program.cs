@@ -21,8 +21,7 @@ builder.Services.AddSignalR();
 builder.Services.AddScoped<IUserSerive, UserService>();
 builder.Services.AddHandFire(builder.Configuration);
 builder.Services.AddMailConfig(builder.Configuration);
-builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
-
+builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies()); 
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
